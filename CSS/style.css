@@ -5,17 +5,19 @@ body
     background-color: white;
 }
 
-/* The Main Navigation Container */
+
+/*---------------------------NAV BAR------------------------------------*/
+
 nav {
     display: flex; /* This puts left, center, and right sections in a row */
     justify-content: space-between; /* Pushes the 3 sections apart */
     align-items: center; /* Vertically centers everything */
-    background-color: #4a4a4a;
+    background-color: #00283a;
     padding: 10px 20px; 
     color: white;
 }
 
-/* Grouping Containers (Left, Center, Right) */
+
 .nav-left, .nav-center, .nav-right {
     display: flex; /* Aligns the items inside each group in a row */
     align-items: center;
@@ -23,8 +25,8 @@ nav {
 }
 
 
-/* Basic styling for the circular placeholder icons */
-.icon-circle, .icon-circle-x, .icon-circle-x-small {
+/* Basic styling for the round placeholder icons */
+.settings, .cart, .lib, .pfp{
     background-color: #e0e0e0;
     color: #333;
     border-radius: 50%;
@@ -35,8 +37,8 @@ nav {
     font-weight: bold;
 }
 
-/* Specific sizing for the circles */
-.icon-circle {
+
+.settings, .cart, .lib, .pfp {
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -44,27 +46,13 @@ nav {
 
 }
 
-.icon-circle-x {
-    width: 30px;
-    height: 30px;
+.logo img {
+  height: 60px; /* Adjust this number to make the logo bigger or smaller */
+  width: auto;  /* Keeps the logo's proportions perfect so it doesn't squish */
+  display: block;
 }
 
-.icon-circle-x-small {
-    width: 20px;
-    height: 20px;
-}
 
-/* Styling for the pill-shaped badges */
-.badge-pill {
-    background-color: #b0a3a3;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #fff;
-}
-
-/* Hamburger Menu Button */
 .hamburger-menu {
     background: none;
     border: none;
@@ -74,21 +62,96 @@ nav {
     padding: 0;
     margin-left: 10px;
 }
+/*---------------------------/NAV BAR------------------------------------*/
 
+
+/*---------------------------FOOTER------------------------------------*/
 /*the footer container*/
 footer {
     display: flex;
-    background-color: #4a4a4a;
+    background-color: #00283a;
     padding: 10px;
     position: fixed;
     bottom: 0px;
     width: 10000px;
 }
 
-/*footer buttons*/
+/*footer buttons
 .footer {
     color: white;
     background-color: transparent;
     border: white;
     bottom: 0px;
+}*/
+
+/*---------------------------/FOOTER------------------------------------*/
+
+
+
+/*---------------------------IMAGE SLIDER------------------------------------*/
+/* 1. The main window that hides anything outside of it */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-top: 100px;
+    overflow: hidden; /* This is the magic that hides the other pictures */
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
+
+/* 2. The long track holding all the images side-by-side */
+.slider-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out; /* Makes the sliding smooth */
+    width: 100%;
+}
+
+/* 3. The individual slides */
+.slide {
+    min-width: 100%; /* Forces each slide to be exactly as wide as the container */
+    box-sizing: border-box;
+    background-color: #2a475e;
+    color: white;
+    text-align: center;
+    /* Just some styling for the placeholder text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 525px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* If you put actual images inside the .slide divs later, use this: */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 4. The Next/Prev Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centers the buttons perfectly vertically */
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 20px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
+
+/*---------------------------/NAV BAR------------------------------------*/
