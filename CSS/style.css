@@ -2,7 +2,11 @@ body
 {
     margin: 0;
     font-family: sans-serif;
-    background-color: rgb(10, 11, 39);
+    background-color: #0a0b27;
+    background-image: linear-gradient(#111240, #0a0b27);
+    background-image: url(../Images/bg-circles.png);
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 
@@ -12,7 +16,7 @@ nav {
     display: flex; /* This puts left, center, and right sections in a row */
     justify-content: space-between; /* Pushes the 3 sections apart */
     align-items: center; /* Vertically centers everything */
-    background-color: #00283a;
+    background-color: #212582;
     padding: 10px 20px; 
     color: white;
 }
@@ -189,9 +193,8 @@ nav {
 /*the footer container*/
 footer {
     display: flex;
-    background-color: #00283a;
+    background-color: #212582;
     padding: 10px;
-    position: fixed;
     bottom: 0px;
     width: 100%;
 }
@@ -204,3 +207,32 @@ footer {
     cursor: pointer;
 }
 /*---------------------------/FOOTER------------------------------------*/
+
+/*---------------------------FAQ-----------------------------------*/
+/*name of the page*/
+.FAQ-main {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #C6C8F0;
+}
+
+/*FAQ sections*/
+.FAQ-sections {
+    color: #C6C8F0;
+    margin-left: 40px;
+    font-size: 25px;
+}
+
+/*FAQ questions*/
+.FAQ-questions {
+    color: #595DD4;
+    font-size: 20px;
+    margin: 300px 0px 300px 0px;
+}
+
+/*FAQ answers*/
+.FAQ-answers {
+    color: #EBEBFA;
+    margin-left: 25px;
+}
