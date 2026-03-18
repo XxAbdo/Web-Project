@@ -59,6 +59,13 @@ nav {
   display: block;
 }
 
+.site-name img{
+    height: auto; 
+    width:  150px;
+    display: block;
+    margin: 0;
+}
+
 
 .hamburger-menu {
     background: none;
@@ -226,9 +233,11 @@ nav {
     box-shadow: 0 20px 30px rgba(0,0,0,0.8); 
 }
 
-.recommend-title{
-    color:white;
-    margin: 150px 0 0 70px;
+.recommend-title img{
+    height: auto;
+    width: 300px;
+    margin: 150px 0 20px 60px
+    
 }
 
 .discover{
@@ -257,9 +266,11 @@ nav {
     box-shadow: 0 20px 30px rgba(0,0,0,0.8); 
 }
 
-.discover-title{
-    color:white;
-    margin: 150px 0 0 70px;
+.discover-title img{
+    height: auto;
+    width: 260px;
+    margin: 150px 0 20px 60px
+    
 }
 /*---------------------------/RECOMMENDED GAMES--------------------------------*/
 
