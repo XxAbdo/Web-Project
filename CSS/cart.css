@@ -32,13 +32,26 @@ nav {
 
 
 
-.settings, .cart, .lib, .pfp{
+.settings, .cart, .lib{
     width: 40px;
     height: 40px;
     cursor: pointer;
     border: none;
     background: none;
     color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;/
+}
+
+.pfp{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border: rgb(100, 115, 250) solid;
     border-radius: 50%;
     display: flex;
     justify-content: center;
