@@ -284,6 +284,7 @@ footer {
     display: block;
 }
 .recommended-game img{
+    max-height: 400px;
     height: auto;
     width: 300px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
