@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel = "stylesheet" href = "../CSS/style.css">
+
+</head>
+
+    <body>
+        <!--**************************************** NAV BAR ********************************************-->
+        <nav>
+    
+            <div class="nav-left">
+
+                <button class="pfp" >Account</button>
+
+                <div class="badge-pill">USERNAME</div>
+                
+            </div>
+
+            <div class="nav-center">
+
+                <div class="logo">
+                    <a href="../Indices/index.html" class="logo">
+                        <img src="../Images/website_logo.png" alt="Game Sphere Logo">
+                    </a>
+                </div>
+
+                <div class="site-name">
+                    <a href="../Indices/index.html" class="logo">
+                        <img src="../Images/site_name2.png" alt="Game Sphere Logo">
+                    </a>
+                </div>
+            
+            </div>
+
+            <div class="nav-right">
+
+                <button class="settings" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                </button>
+
+                <button class="cart" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </button>
+
+                <button class="lib" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </button>
+
+                <button class="hamburger-menu"> &#9776; </button>
+                <div class = "drop-menu">
+                    <a >News</a>
+                    <a>Profile</a>
+                    <a>Browse</a>
+                    <a>Log-Out</a>
+                </div>
+                
+            </div>
+
+        </nav>
+        <!--**************************************** /NAV BAR ********************************************-->
+
+        <main class="content-area">
+
+            <div class="settings-container">
+  
+                <div class="settings-sidebar">
+
+                    <h1 id="dynamic-title">Account</h1>
+                    
+                    <button class="tab-btn active" data-target="account-panel">Account</button>
+                    <button class="tab-btn" data-target="notification-panel">Notification</button>
+                    <button class="tab-btn" data-target="download-panel">Download</button>
+                    <button class="tab-btn" data-target="privacy-panel">Privacy & Security</button>
+                    <button class="tab-btn" data-target="accessibility-panel">Accessibility</button>
+                    <button class="tab-btn" data-target="storage-panel">Storage</button>
+                    <button class="tab-btn">Log-Out</button>
+
+                </div>
+
+                    
+                <div class="setting-right">
+
+                    <div class="outer-box">
+
+                        <div class="inner-box">
+
+                            <div id="account-panel" class="settings-panel active">
+
+                                <div class="profile-section">
+                                    
+                                    <div class="avatar-container">
+
+                                        <div class="avatar-circle">
+                                            <img src="#" alt="Avatar" id="avatar-preview">
+                                        </div>
+                                        
+                                        <label for="avatar-upload" class="upload-btn">Upload Image</label>
+                                        <input type="file" id="avatar-upload">
+                                        
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label >Display Name</label>
+                                        <input type="text" id="display-name" value="Eren Yeager">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label>Username</label>
+                                        <input type="text" id="username" value="@rummbler">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <label>Bio</label>
+                                        <textarea id="bio" rows="4"></textarea>
+                                    </div>
+                                    
+                                    <button class="save-btn">Save Changes</button>
+                                </div>
+                            </div>
+
+                            <div id="notification-panel" class="settings-panel">
+
+                                
+                                <div class="notification-sub">
+                                    <p>Socials & Community:</p> 
+                                    
+                                    <div class="notification-setting">
+                                        Direct Messeages
+                                    <input type="checkbox">
+                                    </div>
+                                    <div class="notification-setting">
+                                        Game Invites
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="notification-setting">
+                                        Achievements Unlocks
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="notification-setting">
+                                        Online Stauts
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+                                
+                                <div class="notification-sub">
+                                    <p>System & Library:</p>
+                                    
+                                    <div class="notification-setting">
+                                        Download Completion
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="notification-setting">
+                                        Marketing Emails
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+
+                                <div class="notification-sub">
+                                    <p>Store & Shopping:</p>
+                                    
+                                    <div class="notification-setting">
+                                        Whislist Sales
+                                        <input type="checkbox">
+                                    </div>
+                                    <div class="notification-setting">
+                                        New Releases
+                                        <input type="checkbox">
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+                            <div id="download-panel" class="settings-panel">
+                                <p>Download preferences go here.</p>
+                            </div>
+
+                            <div id="privacy-panel" class="settings-panel">
+                                <p>Download preferences go here.</p>
+                            </div>
+
+                            <div id="accessibility-panel" class="settings-panel">
+                                <p>Download preferences go here.</p>
+                            </div>
+
+                            <div id="storage-panel" class="settings-panel">
+                                <p>Download preferences go here.</p>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </main>  
+
+    
+        <!--**************************************** FOOTER ********************************************-->
+        <footer>
+
+            <div class = "footer-buttons-container">
+
+              <a class="footer-buttons">About Us</a>
+              <a class="footer-buttons">Privacy & Policies</a>
+              <a href = "../Indices/FAQs.html" class="footer-buttons">FAQ</a>
+
+            </div>
+
+        </footer>
+        
+        <!--**************************************** /FOOTER ********************************************-->
+
+    </body>
+    <script src = "../Source/js_homepage.js"></script>
+
+</html>

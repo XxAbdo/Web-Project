@@ -43,7 +43,7 @@ nav {
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;/
 }
 
 .logo img {
@@ -138,7 +138,7 @@ nav {
 
 
 /*---------------------------IMAGE SLIDER------------------------------------*/
-/* 1. The main window that hides anything outside of it */
+
 .slider-container {
     position: relative;
     width: 100%;
@@ -150,14 +150,14 @@ nav {
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-/* 2. The long track holding all the images side-by-side */
+
 .slider-track {
     display: flex;
     transition: transform 0.4s ease-in-out;
     width: 100%;
 }
 
-/* 3. The individual slides */
+
 .slide {
     min-width: 100%;
     box-sizing: border-box;
@@ -166,7 +166,7 @@ nav {
     text-align: center;
 }
 
-/* If you put actual images inside the .slide divs later, use this: */
+
 .slide img {
     width: 100%;
     height: 100%;
@@ -174,11 +174,11 @@ nav {
     display: block;
 }
 
-/* 4. The Next/Prev Buttons */
+
 .nav-btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Centers the buttons perfectly vertically */
+    transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
@@ -298,37 +298,6 @@ footer {
 
 
 
-/*---------------------------FAQ-----------------------------------*/
-/*name of the page*/
-.FAQ-main {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    color: #C6C8F0;
-}
-
-/*FAQ sections*/
-.FAQ-sections {
-    color: #C6C8F0;
-    margin-left: 40px;
-    font-size: 25px;
-}
-
-/*FAQ questions*/
-.FAQ-questions {
-    color: #595DD4;
-    font-size: 20px;
-    margin: 300px 0px 300px 0px;
-}
-
-/*FAQ answers*/
-.FAQ-answers {
-    color: #EBEBFA;
-    margin-left: 25px;
-}
-/*--------------------------- /FAQ -----------------------------------*/
-
-
 /*------------------------- Drop Down Menu ----------------------------*/
 .drop-menu {
   display: flex;
@@ -362,3 +331,208 @@ footer {
 }
 
 /*------------------------ /Drop Down Menu ---------------------------*/
+
+
+/*------------------------------------- SETTINGS PAGE ---------------------------*/
+.outer-box{
+    background-color: #212582;
+    width: 900px;
+    height: 750px;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
+    border-radius: 16px;
+    margin-left: 50px;
+}
+.inner-box{
+    background-color: #3439cb;
+    width: 800px;
+    height:650px;
+    border-radius: 16px;
+}
+
+
+.settings-container {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: white;
+  
+}
+
+
+.settings-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 200px;
+  flex-shrink: 0;
+  
+}
+
+.tab-btn {
+  background-color: #2a3b70;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+
+.tab-btn:hover, .tab-btn.active:hover {
+  background-color: #4361ab; 
+  box-shadow: 0 0 10px rgba(67, 97, 171, 0.5);
+}
+
+#dynamic-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 32px;
+  
+}
+
+
+.settings-panel {
+  display: none;
+}
+
+.settings-panel.active {
+  display: block;
+}
+
+/*------------------------------------- NOTIFICATION PANEL ---------------------------*/
+
+#notification-panel{
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 400px;
+    margin-left: 50px;
+    margin-top:0;
+    font-size: 20px;
+}
+#notification-panel.active{
+    display: flex;
+
+}
+.notification-sub p{
+    margin-top:50px;
+    margin-bottom: 10px;
+    font-size:25px;
+}
+
+.notification-setting{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+
+}
+/*------------------------------------- /NOTIFICATION PANEL ---------------------------*/
+
+
+/*------------------------------------- ACCOUNT PANEL ---------------------------*/
+
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  padding:40px 0 0 50px
+}
+
+
+.avatar-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.avatar-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; 
+  background-color: #1b2838;
+  border: 3px solid #66c0f4;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+
+#avatar-upload {
+  display: none; 
+}
+
+.upload-btn {
+  background-color: #2a3b70;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.upload-btn:hover {
+  background-color: #4361ab;
+}
+
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 16px;
+  color: #a3b1c6;
+}
+
+.input-group input, .input-group textarea {
+  background-color: #1b2838;
+  border: 2px solid #2a3b70;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+  outline: none;
+  border-color: #66c0f4;
+}
+
+
+.save-btn {
+  background-color: #66c0f4;
+  color: #1b2838;
+  font-weight: bold;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  transition: transform 0.2s ease;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px); 
+}
+
+
+/*------------------------------------- SETTINGS PAGE ---------------------------*/
