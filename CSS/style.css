@@ -543,6 +543,265 @@ footer {
 }
 /*------------------------------------- /ACCOUNT PANEL ---------------------------*/
 
-/*----------------------------------------------------------- SETTINGS PAGE -----------------------------------------------*/
+/*----------------------------------------------------------- /SETTINGS PAGE -----------------------------------------------*/
 
 
+
+/*----------------------------------------------------------- GAME PAGE -----------------------------------------------*/
+
+#nav2 {
+    background-color: #1a1e50;
+    padding: 8px 20px;
+    border-bottom: 1px solid #2a2f4e;
+}
+
+#nav2-left {
+    float: left;
+}
+
+
+#searchbar {
+    background-color: #2a2f4e;
+    border: 1px solid #3a3f70;
+    color: white;
+    padding: 4px 12px;
+    width: 200px;
+    border-radius: 16px;
+}
+
+#dropdown-menu {
+    float: right;
+    background-color: #1a1c2e;
+    border: 1px solid #2a2f4e;
+    color: #e8e8f0;
+    padding: 10px 20px;
+    font-size: 13px;
+    text-align: center;
+    line-height: 2;
+}
+
+
+#nav2::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+
+#hero {
+    background-color: #141726;
+    padding: 30px 30px;
+    border-bottom: 1px solid #2a2f4e;
+    margin-top: 20px;
+}
+
+
+#price-box {
+    float: right;
+    background-color: #1a1c2e;
+    border: 1px solid #2a2f4e;
+    padding: 16px 20px;
+    width: 220px;
+    color: #e8e8f0;
+    margin-left: 20px;
+}
+
+#price {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.btn-buy {
+    background-color: #3a3f70;
+    color: white;
+    border: 1px solid #5a5faa;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-cart {
+    background-color: #2a2f4e;
+    color: white;
+    border: 1px solid #5a5faa;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.wishlink {
+    text-align: center;
+    font-size: 12px;
+    color: #a0a8d0;
+    margin-bottom: 8px;
+}
+
+.review-score {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.all-reviews {
+    font-size: 12px;
+    color: #a0a8d0;
+    margin-bottom: 8px;
+}
+
+.review-words {
+    color: #27ae60;
+}
+
+#star-bars {
+    font-size: 11px;
+    color: #a0a8d0;
+    line-height: 1.8;
+}
+
+#big-star {
+    font-size: 40px;
+    color: #f0a500;
+    text-align: center;
+    margin-top: 8px;
+}
+
+
+#hero {
+    background-image: url(../Images/CoverImg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #141726;
+    padding: 30px 30px;
+    border-bottom: 1px solid #2a2f4e;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+
+#game-name {
+    background-color: #212582;
+    color: white;
+    padding: 12px 28px;
+    font-size: 40px;
+    width: auto;
+    display: inline-block;
+    margin-top: 200px;
+    border-radius: 10px;
+}
+
+#hero::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+#main-content {
+    padding: 20px 30px;
+}
+
+#desc-section h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+#genre-label {
+    float: right;
+    background-color: #2a2f4e;
+    border: 1px solid #3a3f70;
+    padding: 6px 14px;
+    font-size: 14px;
+    margin-top: -30px;
+    color: white;
+}
+
+#desc-text {
+    background-color: #1e2240;
+    border: 1px solid #2a2f4e;
+    padding: 16px;
+    margin-top: 30px;
+    margin-bottom: 16px;
+    clear: both;
+    color:white;
+}
+
+#desc-section h3{
+    color: white;
+}
+
+#desc-section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+#screenshots {
+    margin-bottom: 16px;
+}
+
+.screenshot {
+    width: 140px;
+    height: 100px;
+    border: 1px solid #2a2f4e;
+    margin-right: 10px;
+    background-color: #2a2f4e;
+}
+
+#recommendations {
+    padding: 20px 30px;
+    border-top: 1px solid #2a2f4e;
+}
+
+#recommendations h3 {
+    font-size: 18px;
+    margin-bottom: 14px;
+    color:white;
+}
+
+.rec-card {
+    display: inline-block;
+    background-color: #181c2e;
+    border: 1px solid #2a2f4e;
+    padding: 8px;
+    margin-right: 10px;
+    width: 140px;
+    vertical-align: top;
+}
+
+.rec-card img {
+    width: 130px;
+    height: 90px;
+    background-color: #2a2f4e;
+    border: 1px solid #3a3f70;
+}
+
+.rec-card p {
+    font-size: 12px;
+    margin-top: 6px;
+    text-align: center;
+    color: white;
+}
+
+.rec-title {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 6px;
+    text-align: center;
+    color: #e8e8f0;
+}
+
+.rec-price {
+    font-size: 12px;
+    text-align: center;
+    color: #f0a500;
+}
+
+/*----------------------------------------------------------- /GAME PAGE -----------------------------------------------*/
