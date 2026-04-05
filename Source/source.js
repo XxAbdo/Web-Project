@@ -47,19 +47,22 @@ let dynamicTitle = document.getElementById('dynamic-title');
 
 tabs.forEach(tab => { tab.addEventListener('click', () => {
     
-    
-    tabs.forEach(t => t.classList.remove('active'));
-    panels.forEach(p => p.classList.remove('active'));
-
-   
-    tab.classList.add('active');
+    if(tab.textContent != "Log-Out"){
+        
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
 
     
-    dynamicTitle.innerText = tab.innerText;
+        tab.classList.add('active');
 
+        
+        dynamicTitle.innerText = tab.innerText;
+
+        
+        let targetPanelId = tab.getAttribute('data-target');
+        document.getElementById(targetPanelId).classList.add('active');
+    }
     
-    let targetPanelId = tab.getAttribute('data-target');
-    document.getElementById(targetPanelId).classList.add('active');
     
 });
 });

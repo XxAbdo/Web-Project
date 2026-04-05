@@ -398,12 +398,27 @@ footer {
     background-color: #4361ab; 
     box-shadow: 0 0 10px rgba(67, 97, 171, 0.5);
 }  
+
+#log-out-btn{
+    background-color: #2a3b70;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+#log-out-btn:hover{
+    background-color: #4361ab; 
+    box-shadow: 0 0 10px rgba(67, 97, 171, 0.5);
+}
   
 #dynamic-title {
     text-align: center;
     margin-bottom: 25px;
     font-size: 32px;
-    
+    height: 75px;
 }  
   
 .settings-panel {
@@ -412,35 +427,8 @@ footer {
   
 .settings-panel.active {
     display: block;
-    padding:50px;
+    padding:25px 50px;
 }  
-
-/*------------------------------------- NOTIFICATION PANEL ---------------------------*/
-
-#notification-panel{
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 400px;
-    font-size: 20px;
-}
-#notification-panel.active{
-    display: flex;
-
-}
-.notification-sub p{
-    margin-top:50px;
-    margin-bottom: 10px;
-    font-size:25px;
-}
-
-.notification-setting{
-    display: flex;
-    width: 300px;
-    justify-content: space-between;
-
-}
-/*------------------------------------- /NOTIFICATION PANEL ---------------------------*/
-
 
 /*------------------------------------- ACCOUNT PANEL ---------------------------*/
 
@@ -506,6 +494,7 @@ footer {
 }   
 
 .input-group label {
+    margin-top: 5px;
     font-size: 16px;
     color: #a3b1c6;
 }
@@ -517,12 +506,6 @@ footer {
     padding: 12px 15px;
     border-radius: 10px;
     font-size: 16px;
-    transition: border-color 0.3s ease;
-}
-
-.input-group input:focus, .input-group textarea:focus {
-    outline: none;
-    border-color: #66c0f4;
 }
 
 
@@ -536,6 +519,7 @@ footer {
     cursor: pointer;
     font-size: 18px;
     margin-top: 10px;
+    width: 250px;
     transition: transform 0.2s ease;
 }
 
@@ -543,6 +527,135 @@ footer {
     transform: translateY(-2px); 
 }
 /*------------------------------------- /ACCOUNT PANEL ---------------------------*/
+
+
+/*------------------------------------- NOTIFICATION PANEL ---------------------------*/
+
+#notification-panel{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    font-size: 20px;
+}
+#notification-panel.active{
+    display: flex;
+
+}
+.notification-sub p{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size:24px;
+}
+
+.notification-setting{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+
+}
+.notification-sub{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2a3b70;
+}
+/*------------------------------------- /NOTIFICATION PANEL ---------------------------*/
+
+
+/*------------------------------------- Privacy & Security PANEL ---------------------------*/
+
+#privacy-panel{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 520px;
+    font-size: 20px;
+}
+
+#privacy-panel.active{
+    display: flex;
+}
+
+.privacy-panel-sub p{
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size:24px;
+}
+
+.privacy-setting{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 500px;
+}
+.privacy-panel-sub{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2a3b70;
+}
+.password-change-container{
+    margin-bottom: 40px;
+}
+
+/*------------------------------------- /Privacy & Security PANEL ---------------------------*/
+
+/*------------------------------------- ACCESIBILTY PANEL ---------------------------*/
+
+#accessibility-panel {
+    flex-direction: column;
+    max-width: 650px;
+    padding-top: 20px;
+}
+
+#accessibility-panel p{
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size:24px;
+}
+#accessibility-panel.active {
+    display: flex;
+}
+
+
+#access-section {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #2a3b70;
+    padding-bottom: 20px;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #a3b1c6;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.access-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2a3b70;
+    padding: 15px 0;
+}
+
+.access-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 20px;
+}
+
+.access-title {
+    font-size: 18px;
+    color: white;
+}
+
+.access-sub-title {
+    font-size: 14px;
+    color: #a3b1c6;
+}
+
+
+/*------------------------------------- /ACCESIBILTY PANEL ---------------------------*/
+
 
 /*----------------------------------------------------------- /SETTINGS PAGE -----------------------------------------------*/
 
