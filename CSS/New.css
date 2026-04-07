@@ -1,4 +1,5 @@
-/*---------------------------GLOBAL VARIABLES--------------------------------*/
+
+/*----------------------------------------------------GLOBALs & VARIABLES-------------------------------------------------*/
 
 :root {
     --bg-color: #0a0b27;
@@ -19,7 +20,8 @@ body {
     margin: 0;
     font-family: sans-serif;
     background-color: var(--bg-color);
-    background-image: linear-gradient(#111240, var(--bg-color)), url(../Images/bg-circles.png);
+    background-image: linear-gradient(#111240, var(--bg-color));
+    background-image: url(../Images/bg-circles.png);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -141,6 +143,7 @@ footer {
 
 /*---------------------------/NAV BAR and FOOTER--------------------------------*/
 
+/*----------------------------------------------------/GLOBALs & VARIABLES-------------------------------------------------*/
 
 
 /*----------------------------------------------------HOME PAGE-------------------------------------------------*/
@@ -265,17 +268,18 @@ footer {
 
 .recommended-game img, .discover-game img {
     width: 300px; 
+    height: 450px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
     display: block;
     border-radius: 8px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.recommended-game img { 
-    max-height: 400px; 
-    height: auto; 
+.home-game-info{
+    color:white;
+    font-weight: bold;
+    font-size:20px;
 }
-.discover-game img { height: auto; }
 
 .recommended-game img:hover, .discover-game img:hover { 
     transform: scale(1.05) translateY(-10px); 
