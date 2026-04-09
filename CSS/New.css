@@ -748,6 +748,22 @@ footer {
     background-color: white; 
     border-radius: 2px; 
 }
+#friends-tab{ flex-direction: column;}
+
+.friends{
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    padding-top: 20px;
+}
+
+.friends img{
+    height: 100px; 
+    width: 100px; 
+    object-fit: cover; 
+    border-radius: 100%;
+}
 
 /*----------------------------------------------------/PROFILE PAGE-------------------------------------------------*/
 
