@@ -12,7 +12,7 @@
     <body>
         <!--**************************************** NAV BAR ********************************************-->
         <nav>
-        
+    
             <div class="nav-left">
 
                 <a class="pfp" href="Profile.html">
@@ -22,7 +22,7 @@
                     </svg>
                 </a>
 
-                <div class="badge-pill">USERNAME</div>
+                <a href="Profile.html" class="nav_username">USERNAME</a>
                 
             </div>
 
@@ -105,89 +105,123 @@
 
 
                 <div class="profile-tabs">
-                    <a>Achievements</a>
+                    <button class="profile-btn active" data-target="achievements-tab"">Achievements</button>
+                    <button class="profile-btn"        data-target="firends-tab">Friends</button>
                 </div>
 
 
-                <div class="games-list">
+                <div id="firends-tab" class="profile-tab">
+                    <p>HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH</p>
+                </div>
+
+                <div id="achievements-tab" class="profile-tab active">
+
+                    <div id="games-list">
                     
-                    <div class="game-card">
+                        <div class="game-card">
 
-                        <img src="../Images/screenshot 1.jpg" alt="PUBG" class="game-image">
+                            <img src="../Images/minecraft.jpg" alt="MINECRAFT" class="game-image">
 
-                        <div class="game-details">
+                            <div class="game-details">
 
-                            <h2>PUBG BATTLEGROUNDS</h2>
+                                <h2>MINECRAFT</h2>
 
-                            <div class="progress-section">
+                                <div class="progress-section">
 
-                                <div class="progress-text">
+                                    <div class="progress-text">
 
-                                    <span class="progress-title">Achievement Progress</span>
-                                    <span class="progress-numbers"><span class="percent">8%</span> 3/37 Achievements</span>
-                                </div>
+                                        <span class="progress-title">Achievement Progress</span>
+                                        <span class="progress-numbers"><span class="percent">8%</span> 3/37 Achievements</span>
+                                    </div>
 
-                                <div class="progress-track">
-                                    <div class="progress-fill" style="width: 8%;"></div>
-                                </div>
+                                    <div class="progress-track">
+                                        <div class="progress-fill" style="width: 8%;"></div>
+                                    </div>
 
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="game-card">
-
-                        <img src="../Images/CoverImg.jpg" alt="Apex Racers" class="game-image">
-
-                        <div class="game-details">
-
-                            <h2>APEX RACERS</h2>
-
-                            <div class="progress-section">
-
-                                <div class="progress-text">
-                                    <span class="progress-title">Achievement Progress</span>
-                                    <span class="progress-numbers"><span class="percent">65%</span> 39/60 Achievements</span>
-                                </div>
-
-                                <div class="progress-track">
-                                    <div class="progress-fill" style="width: 65%;"></div>
                                 </div>
 
                             </div>
 
                         </div>
 
-                    </div>
+                        <div class="game-card">
 
-                    <div class="game-card">
+                            <img src="../Images/pubg.jpg" alt="Cyberpunk" class="game-image">
 
-                        <img src="../Images/rec4.jpg" alt="Cyberpunk" class="game-image">
+                            <div class="game-details">
 
-                        <div class="game-details">
+                                <h2>PUBG</h2>
 
-                            <h2>CYBERPUNK OPEN WORLD</h2>
+                                <div class="progress-section">
 
-                            <div class="progress-section">
+                                    <div class="progress-text">
+                                        <span class="progress-title">Achievement Progress</span>
+                                        <span class="progress-numbers"><span class="percent">100%</span> 45/45 Achievements</span>
+                                    </div>
 
-                                <div class="progress-text">
-                                    <span class="progress-title">Achievement Progress</span>
-                                    <span class="progress-numbers"><span class="percent">100%</span> 45/45 Achievements</span>
+                                    <div class="progress-track">
+                                        <div class="progress-fill" style="width: 100%;"></div>
+                                    </div>
+
                                 </div>
+                                
+                            </div>
 
-                                <div class="progress-track">
-                                    <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                        
+                        <div class="game-card">
+
+                            <img src="../Images/Elden Ring Featured Image.jpg" alt="Apex Racers" class="game-image">
+
+                            <div class="game-details">
+
+                                <h2>ELDEN RING</h2>
+
+                                <div class="progress-section">
+
+                                    <div class="progress-text">
+                                        <span class="progress-title">Achievement Progress</span>
+                                        <span class="progress-numbers"><span class="percent">65%</span> 39/60 Achievements</span>
+                                    </div>
+
+                                    <div class="progress-track">
+                                        <div class="progress-fill" style="width: 65%;"></div>
+                                    </div>
+
                                 </div>
 
                             </div>
-                            
+
+                        </div>
+
+                        <div class="game-card">
+
+                            <img src="../Images/gta_v.jpg" alt="Cyberpunk" class="game-image">
+
+                            <div class="game-details">
+
+                                <h2>GTA V</h2>
+
+                                <div class="progress-section">
+
+                                    <div class="progress-text">
+                                        <span class="progress-title">Achievement Progress</span>
+                                        <span class="progress-numbers"><span class="percent">100%</span> 45/45 Achievements</span>
+                                    </div>
+
+                                    <div class="progress-track">
+                                        <div class="progress-fill" style="width: 100%;"></div>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+
                         </div>
 
                     </div>
-
                 </div>
+                
 
             </div>
         </main>  
