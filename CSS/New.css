@@ -11,6 +11,19 @@
     --text-muted: #a3b1c6;
     --highlight: #66c0f4;
     --accent-orange: #f0a500;
+    --text-dark: #444444;
+    --text-main: #ffffff;
+    --text-dark: #444444; 
+    --bg-light: #f0f0f0; 
+    --border-light: #cccccc; 
+    --bg-darker: #141726; 
+    --bg-card: #2a2f4e; 
+    --btn-dark: #3a3f70; 
+    --accent-cyan: #00ccff; 
+    --accent-blue: #0066cc; 
+    --accent-purple: #6473fa;
+    --accent-red: #cc3333; 
+    --accent-green: #27ae60;
 }
 
 body {
@@ -75,7 +88,7 @@ nav {
 .pfp {
     color: white;
     background-color: transparent;
-    border: 2px solid rgb(100, 115, 250);
+    border: 2px solid var(--accent-purple);
 }
 
 .logo img { 
@@ -107,7 +120,7 @@ nav {
     position: absolute;
     top: 60px; 
     right: 0; 
-    background-color: #0b1120;
+    background-color: var(--bg-darker);
     width: 150px; 
     padding: 20px; 
     border-radius: 8px;
@@ -168,40 +181,40 @@ footer {
 .search-container {
     display: flex; 
     justify-content: space-between;
-    background-color: #f0f0f0; 
+    background-color: var(--bg-light); 
     border-radius: 20px;
     padding: 8px 16px; 
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-light);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .search-container:focus-within { 
-    border-color: #00CCFF; 
-    box-shadow: 0 0 8px #00A2FF; 
+    border-color: var(--accent-cyan); 
+    box-shadow: 0 0 8px var(--accent-cyan); 
 }
 
 .search-input { 
     background: transparent; 
     border: none; 
-    color: #333; 
+    color: var(--text-dark); 
     width: 220px; 
     font-size: 14px; 
     outline: none; 
 }
 
-.search-input::placeholder { color: #888; }
+.search-input::placeholder { color: var(--text-dark); }
 
 .search-btn { 
     background: none; 
     border: none; 
-    color: #666; 
+    color: var(--text-dark); 
     cursor: pointer; 
     padding: 0; 
     margin-left: 8px; 
     transition: color 0.2s; 
 }
 
-.search-btn:hover { color: #003b5c; }
+.search-btn:hover { color: var(--accent-blue); }
 
 /*--------------------------------/SEARCH BAR------------------------------------*/
 
@@ -226,7 +239,7 @@ footer {
 .slide { 
     min-width: 100%; 
     box-sizing: border-box; 
-    background-color: #2a475e; 
+    background-color: var(--bg-card); 
     color: white; 
     text-align: center;
     position: relative; 
@@ -369,7 +382,7 @@ footer {
     margin-left: 50px; 
 }
 .inner-box { 
-    background-color: #3439cb; 
+    background-color: var(--btn-hover); 
     width: 800px; 
     height: 650px; 
     border-radius: 16px; 
@@ -623,7 +636,7 @@ footer {
 .avatar-circle-large { 
     width: 140px; 
     height: 140px; 
-    background-color: #e31837; 
+    background-color: var(--accent-red); 
     border-radius: 50%; 
     display: flex; 
     justify-content: center; 
@@ -727,7 +740,7 @@ footer {
 
 .progress-numbers { 
     font-size: 13px; 
-    color: #ccc; 
+    color: var(--border-light); 
 }
 
 .percent { 
@@ -772,16 +785,16 @@ footer {
 /*----------------------------------------------------GAME BASE PAGE------------------------------------------------*/
 
 #nav2 { 
-    background-color: #1a1e50; 
+    background-color: var(--bg-darker); 
     padding: 8px 20px; 
-    border-bottom: 1px solid #2a2f4e; 
+    border-bottom: 1px solid var(--bg-card); 
 }
 
 #nav2-left { float: left; }
 
 #searchbar { 
-    background-color: #2a2f4e; 
-    border: 1px solid #3a3f70; 
+    background-color: var(--bg-card); 
+    border: 1px solid var(--btn-dark); 
     color: white; 
     padding: 4px 12px; 
     width: 200px; 
@@ -790,8 +803,8 @@ footer {
 
 #dropdown-menu { 
     float: right; 
-    background-color: #1a1c2e; 
-    border: 1px solid #2a2f4e; 
+    background-color: var(--bg-darker); 
+    border: 1px solid var(--bg-card); 
     color: var(--text-light); 
     padding: 10px 20px; 
     font-size: 13px; 
@@ -809,9 +822,9 @@ footer {
     background-image: url(../Images/CoverImg.jpg); 
     background-size: cover; 
     background-position: center; 
-    background-color: #141726;
+    background-color: var(--bg-darker);
     padding: 30px 30px; 
-    border-bottom: 1px solid #2a2f4e; 
+    border-bottom: 1px solid var(--bg-card); 
     min-height: 320px; 
     overflow: hidden; 
     margin-top: 20px;
@@ -819,8 +832,8 @@ footer {
 
 #price-box { 
     float: right; 
-    background-color: #1a1c2e; 
-    border: 1px solid #2a2f4e; 
+    background-color: var(--bg-darker); 
+    border: 1px solid var(--bg-card); 
     padding: 16px 20px; 
     width: 220px; 
     color: var(--text-light); 
@@ -835,7 +848,7 @@ footer {
 }
 
 .btn-buy, .btn-cart { 
-    border: 1px solid #5a5faa; 
+    border: 1px solid var(--btn-dark); 
     padding: 10px; width: 100%; 
     margin-bottom: 8px; 
     cursor: pointer; 
@@ -843,8 +856,8 @@ footer {
     color: white; 
 }
 
-.btn-buy { background-color: #3a3f70; }
-.btn-cart { background-color: #2a2f4e; }
+.btn-buy { background-color: var(--btn-dark); }
+.btn-cart { background-color: var(--bg-card); }
 
 .wishlink, .all-reviews { 
     text-align: center; 
@@ -894,8 +907,8 @@ footer {
 
 #genre-label { 
     float: right; 
-    background-color: #2a2f4e; 
-    border: 1px solid #3a3f70; 
+    background-color: var(--bg-card); 
+    border: 1px solid var(--btn-dark); 
     padding: 6px 14px; 
     font-size: 14px; 
     margin-top: -30px; 
@@ -903,8 +916,8 @@ footer {
 }
 
 #desc-text { 
-    background-color: #1e2240; 
-    border: 1px solid #2a2f4e; 
+    background-color: var(--bg-card); 
+    border: 1px solid var(--bg-card); 
     padding: 16px; 
     margin-top: 30px;
     margin-bottom: 16px; 
@@ -917,20 +930,20 @@ footer {
 .screenshot { 
     width: 140px; 
     height: 100px; 
-    border: 1px solid #2a2f4e; 
+    border: 1px solid var(--bg-card); 
     margin-right: 10px; 
-    background-color: #2a2f4e; 
+    background-color: var(--bg-card); 
 }
 
 #recommendations { 
     padding: 20px 30px;
-    border-top: 1px solid #2a2f4e; 
+    border-top: 1px solid var(--bg-card); 
 }
 
 .rec-card { 
     display: inline-block; 
-    background-color: #181c2e; 
-    border: 1px solid #2a2f4e; 
+    background-color: var(--bg-darker); 
+    border: 1px solid var(--bg-card); 
     padding: 8px; 
     margin-right: 10px; 
     width: 140px; 
@@ -940,8 +953,8 @@ footer {
 .rec-card img { 
     width: 130px; 
     height: 90px; 
-    background-color: #2a2f4e; 
-    border: 1px solid #3a3f70; 
+    background-color: var(--bg-card); 
+    border: 1px solid var(--btn-dark); 
 }
 
 .rec-card p { 
@@ -972,8 +985,8 @@ footer {
 /*------------------------------------------------------CART PAGE----------------------------------------------------*/
 
 .card { 
-    background: rgb(128, 119, 255); 
-    border: 1px solid #050256; 
+    background: var(--accent-purple); 
+    border: 1px solid var(--bg-card); 
     border-radius: 8px; 
     padding: 20px; 
     margin-bottom: 20px; 
@@ -982,7 +995,7 @@ footer {
 
 section.hero { 
     background: rgb(128, 119, 255); 
-    border: 1px solid #050256; 
+    border: 1px solid var(--bg-card); 
     border-radius: 8px; 
     padding: 20px; 
     margin-bottom: 20px; 
@@ -1013,7 +1026,7 @@ section.hero + .content-area {
     gap: 15px; 
     align-items: center; 
     padding: 15px 0; 
-    border-bottom: 1px solid #ddd; 
+    border-bottom: 1px solid var(--border-light); 
 }
 
 .cart-item:last-child { border-bottom: none; }
@@ -1021,7 +1034,7 @@ section.hero + .content-area {
 .thumb { 
     width: 60px; 
     height: 60px; 
-    background: #e6eefc; 
+    background: var(--bg-light); 
     display: flex; 
     align-items: center; 
     justify-content: center; 
@@ -1032,7 +1045,7 @@ section.hero + .content-area {
 .item-info h3 { margin-bottom: 5px; }
 .item-info p, .meta, .note { 
     font-size: 14px; 
-    color: #666; 
+    color: var(--text-dark); 
 }
 
 .price-area { text-align: right; }
@@ -1043,7 +1056,7 @@ section.hero + .content-area {
 }
 
 .remove { 
-    color: #cc3333; 
+    color: var(--accent-red); 
     text-decoration: none; 
     font-size: 14px; 
 }
@@ -1056,7 +1069,7 @@ section.hero + .content-area {
 
 .total { 
     font-weight: bold; 
-    border-top: 1px solid #ddd; 
+    border-top: 1px solid var(--border-light); 
     padding-top: 10px; 
 }
 
@@ -1069,7 +1082,7 @@ section.hero + .content-area {
 .promo input { 
     flex: 1; 
     padding: 10px; 
-    border: 1px solid #ccc; 
+    border: 1px solid var(--border-light); 
     border-radius: 4px; 
 }
 
@@ -1080,11 +1093,11 @@ section.hero + .content-area {
     cursor: pointer; 
 }
 
-.btn-apply { background: #ddd; }
+.btn-apply { background: var(--border-light); }
 
 .btn-checkout { 
     width: 100%; 
-    background: #0066cc; 
+    background: var(--accent-blue); 
     color: white; 
     margin-top: 10px; 
 }
