@@ -1,7 +1,0 @@
-
-Notes:
-- most of the images are just place holders that will be used later.
-- the table inside the game template (Game Requirments) will be added later.
-- only 2 panels inside the settings page are implemented and the others will be implemented later.
-- some javascript was used to implement the dropdown menu and image slider.
-- SVG tag was used for the creation of the icons.
