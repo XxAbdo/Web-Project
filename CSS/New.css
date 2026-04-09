@@ -47,6 +47,10 @@ nav {
     gap: 12px;
 }
 
+.nav_username{
+    color: white;
+}
+
 .settings, .cart, .lib, .pfp {
     width: 40px;
     height: 40px;
@@ -146,6 +150,7 @@ footer {
 /*----------------------------------------------------/GLOBALs & VARIABLES-------------------------------------------------*/
 
 
+
 /*----------------------------------------------------HOME PAGE-------------------------------------------------*/
 
 /*--------------------------------SEARCH BAR------------------------------------*/
@@ -218,13 +223,32 @@ footer {
     box-sizing: border-box; 
     background-color: #2a475e; 
     color: white; 
-    text-align: center; 
+    text-align: center;
+    position: relative; 
 }
+
+.slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top right,
+        rgba(0, 0, 0, 0.85) 0%,    /* dark on the left */
+        rgba(0, 0, 0, 0.4)  40%,   /* fades in the middle */
+        rgba(0, 0, 0, 0)    70%    /* fully transparent on the right */
+    );
+    cursor: pointer;
+}
+
 .slide img { 
     width: 100%; 
     height: 100%; 
     object-fit: cover; 
     display: block; 
+    
 }
 
 .nav-btn {
@@ -244,6 +268,30 @@ footer {
 
 .prev-btn { left: 0; } 
 .next-btn { right: 0; }
+
+.slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: white;
+    text-shadow: 2px 2px 6px rgb(0, 0, 0);
+    z-index: 10;
+    opacity: 1;
+    padding-bottom: 25px;
+}
+
+.slide-caption h2 {
+    font-size: 1.8rem;
+    margin: 0 0 6px 0;
+    font-size: 40px;
+}
+
+.slide-caption p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+
 /*--------------------------------/IMAGE SLIDER-----------------------------------*/
 
 /*-------------------------DISCOVER & RECOMMENDED GAMES---------------------------*/
