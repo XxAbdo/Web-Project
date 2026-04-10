@@ -819,7 +819,7 @@ footer {
 }
 
 #hero { 
-    background-image: url(../Images/CoverImg.jpg); 
+    background-image: url(../Images/game_images/red_dead_redemtion2/RDR2.jpg); 
     background-size: cover; 
     background-position: center; 
     background-color: var(--bg-darker);
@@ -893,7 +893,7 @@ footer {
     font-size: 40px; 
     width: auto; 
     display: inline-block; 
-    margin-top: 200px; 
+    margin-top: 450px; 
     border-radius: 10px; 
 }
 
