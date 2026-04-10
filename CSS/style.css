@@ -466,18 +466,18 @@ footer {
     object-fit: cover; 
 }
 
-#avatar-upload { display: none; }
-
 .upload-btn { 
     background-color: var(--border-color); 
+    color: white;
     padding: 10px 20px; 
     border-radius: 20px; 
     cursor: pointer; 
     transition: all 0.3s ease; 
     font-size: 14px; 
+    border: none;
 }
 
-.upload-btn:hover { background-color: var(--btn-hover); }
+.upload-btn:hover { background-color: var(--accent-purple); }
 
 .input-group { 
     display: flex; 
