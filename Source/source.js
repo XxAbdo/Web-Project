@@ -1,11 +1,20 @@
 
-
+/*--------------------------------------------------------------- Drop Down Menu -----------------------------------------------------------*/
 let hamburger = document.querySelector('.hamburger-menu');
 let dropmenu = document.querySelector('.drop-menu');
+
 hamburger.addEventListener('click', function() { dropmenu.classList.toggle('active');});
 
+document.addEventListener('click', function(event) {
+    if (!hamburger.contains(event.target) && !dropmenu.contains(event.target)) 
+    {
+        dropmenu.classList.remove('active');
+    }
+});
 
 
+
+/*--------------------------------------------------------------- Image Sliding -----------------------------------------------------------*/
 let currentIndex = 0;
 
 function moveSlide(direction) 
@@ -34,6 +43,7 @@ function moveSlide(direction)
 
 
 
+/*--------------------------------------------------------------- Settings Tab Switching -----------------------------------------------------------*/
 let tabs = document.querySelectorAll('.tab-btn');
 let panels = document.querySelectorAll('.settings-panel');
 let dynamicTitle = document.getElementById('dynamic-title');
@@ -57,8 +67,7 @@ tabs.forEach(tab => { tab.addEventListener('click', () => {
 });
 });
 
-
-
+/*--------------------------------------------------------------- Profile Tab Switching -----------------------------------------------------------*/
 let profileBtns = document.querySelectorAll('.profile-btn');
 let profileTabs = document.querySelectorAll('.profile-tab');
 
@@ -79,6 +88,7 @@ profileBtns.forEach(btn => btn.addEventListener('click', () =>{
 
 
 
+/*---------------------------------------------------------------- Search Functionality ------------------------------------------------------------*/
 
 const availableGames = [
     { name: "Resident Evil Requiem",    url: "#",                                                   image: "../images/game_images/resident_evil_requiem/rer.jpg"},
@@ -168,8 +178,7 @@ if (searchInput && suggestionsBox)
         } 
         else 
         {
-            // If no games match the search
-            const noResult = document.createElement('div');
+            let noResult = document.createElement('div');
             noResult.classList.add('suggestion-item');
             noResult.textContent = "No games found...";
             suggestionsBox.appendChild(noResult);
