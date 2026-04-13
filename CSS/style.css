@@ -29,12 +29,10 @@
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
     font-family: sans-serif;
     background-color: var(--bg-color);
-    background-image: linear-gradient(#111240, var(--bg-color));
-    background-image: url(../Images/bg-circles.png);
+    margin: 0;    
+    background-image: url(../Images/website_images/bg-circles.png);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -174,8 +172,9 @@ footer {
 /*--------------------------------SEARCH BAR------------------------------------*/
 
 .search-wrapper {
-     max-width: 1000px; 
-     margin: 40px auto; 
+    max-width: 1000px; 
+    margin: 40px auto;
+    position: relative; 
 }
 
 .search-container {
@@ -216,6 +215,50 @@ footer {
 
 .search-btn:hover { color: var(--accent-blue); }
 
+
+.suggestions-box {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    background-color: var(--panel-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    margin-top: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    z-index: 100; 
+    overflow: hidden;
+}
+
+.suggestion-item {
+    display: flex;          
+    align-items: center;     
+    gap: 15px;
+    padding: 15px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.suggestion-item img {
+    width: 65px;             
+    height: 80px;            
+    object-fit: cover;       
+    border-radius: 4px;      
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background-color: var(--btn-hover);
+}
+
 /*--------------------------------/SEARCH BAR------------------------------------*/
 
 /*--------------------------------IMAGE SLIDER------------------------------------*/
@@ -254,11 +297,11 @@ footer {
     height: 100%;
     background: linear-gradient(
         to top right,
-        rgba(0, 0, 0, 0.85) 0%,    /* dark on the left */
-        rgba(0, 0, 0, 0.4)  40%,   /* fades in the middle */
-        rgba(0, 0, 0, 0)    70%    /* fully transparent on the right */
+        rgba(0, 0, 0, 0.85) 0%,    
+        rgba(0, 0, 0, 0.4)  40%,   
+        rgba(0, 0, 0, 0)    70%    
     );
-    cursor: pointer;
+    pointer-events: none;
 }
 
 .slide img { 
@@ -276,8 +319,7 @@ footer {
     background: rgba(0, 0, 0, 0.6); 
     color: white; 
     border: none;
-    padding: 20px 15px; 
-    cursor: pointer; 
+    padding: 20px 15px;  
     font-size: 24px; 
     z-index: 10; 
     transition: background 0.2s;
