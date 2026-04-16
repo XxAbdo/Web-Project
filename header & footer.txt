@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel = "stylesheet" href = "../CSS/style.css">
+    <style>
+        main{
+            color:white;
+        }
+    </style>
+</head>
+
+    <body>
+        <!--**************************************** NAV BAR ********************************************-->
+        <nav>
+    
+            <div class="nav-left">
+
+                <a class="pfp" href="Profile.html">
+                    <svg class="account-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+
+                <a href="Profile.html" class="nav_username">USERNAME</a>
+                
+            </div>
+
+            <div class="nav-center">
+
+                <div class="logo">
+                    <a href="../Indices/index.html" class="logo">
+                        <img src="../Images/website_images/website_logo.png" alt="Game Sphere Logo">
+                    </a>
+                </div>
+
+                <div class="site-name">
+                    <a href="../Indices/index.html" class="logo">
+                        <img src="../Images/website_images/site_name2.png" alt="Game Sphere Logo">
+                    </a>
+                </div>
+            
+            </div>
+
+            <div class="nav-right">
+
+                <a href="settings.html" class="settings" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                </a>
+
+                <a href= "gaming-cart.html" class="cart" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </a>
+
+                <a class="lib" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </a>
+
+                <button class="hamburger-menu"> &#9776; </button>
+                <div class = "drop-menu">
+                    <a >News</a>
+                    <a href="Profile.html">Profile</a>
+                    <a>Browse</a>
+                    <a>Log-Out</a>
+                </div>
+                
+            </div>
+
+        </nav>
+        <!--**************************************** /NAV BAR ********************************************-->
+
+
+
+        <!--**************************************** FOOTER ********************************************-->
+        <footer>
+
+            <div class = "footer-buttons-container">
+
+                <a class="footer-buttons">About Us</a>
+                <a class="footer-buttons" href="Privacy.html">Privacy & Policies</a>
+                <a class="footer-buttons">FAQ</a>
+
+            </div>
+
+        </footer>
+        
+        <!--**************************************** /FOOTER ********************************************-->
+
+        
+        <script src = "../Source/source.js"></script>
+    </body>
+
+</html>

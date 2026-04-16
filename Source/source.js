@@ -86,8 +86,6 @@ profileBtns.forEach(btn => btn.addEventListener('click', () =>{
 
 
 
-
-
 /*---------------------------------------------------------------- Search Functionality ------------------------------------------------------------*/
 
 const availableGames = [
@@ -187,4 +185,156 @@ if (searchInput && suggestionsBox)
         
         
     }
+}
+
+
+
+/*-------------------------------------------------------------Login Validation-------------------------------------------------------------*/
+let LoginValidation = document.getElementById("login-validation");
+let LoginPassword = document.getElementById("login-password");
+let LoginUsername = document.getElementById("login-username");
+
+function VerifyLogin() {
+    let LoginPassword = document.getElementById("login-password").value;
+    let LoginUsername = document.getElementById("login-username").value;
+    let NameExist = false;
+    let PasswordExist = false;
+
+
+    if (LoginPassword.length != 0) {
+        PasswordExist = true;
+    }
+    else {
+        LoginValidation.textContent = "You need to enter your password.";
+        LoginValidation.style.color = "red";
+    }
+
+    if (LoginUsername.length != 0) {
+        NameExist = true;
+    }
+    else {
+        LoginValidation.textContent = "You need to enter your username.";
+        LoginValidation.style.color = "red";
+    }
+    
+    if (PasswordExist == true && NameExist == true) {
+        LoginValidation.textContent = "You have logged into your account!";
+        LoginValidation.style.color = "lime";
+    }
+}
+
+/*------------------------------------------------------------login Panel Switching--------------------------------------------------------------*/
+let log_center = document.querySelectorAll('.login-center');
+let page_btns = document.querySelectorAll('.log-btn');
+
+page_btns.forEach(btn => btn.addEventListener('click', () => {
+
+    log_center.forEach(t => t.classList.remove('active'));
+
+    let target_panel = btn.getAttribute('data-target');
+    document.getElementById(target_panel).classList.add('active');
+
+}))
+
+
+/*----------------------------------------------------------- Sign-Up Validation ---------------------------------------------------------------*/
+let SignUpValidation = document.getElementById("sign-up-validation");
+let checkbox = document.getElementById("TOS-Checkbox");
+let NewUsername = document.getElementById("new-username");
+let NewEmail = document.getElementById("new-email");
+
+
+function VerifySignUp() {
+
+    let Password = document.getElementById("password1").value;
+    let ConfirmPassword = document.getElementById("password2").value;
+    let NewUsername = document.getElementById("new-username").value;
+    let NewEmail = document.getElementById("new-email").value;
+    let ValidPassword = false;
+    let TOSconfirm = false;
+    let NameExist = false;
+    let EmailExist = false;
+
+
+    if (checkbox.checked) {
+        TOSconfirm = true;
+    }
+    else {
+        SignUpValidation.textContent = "Please confirm if you agree with our terms and services.";
+        SignUpValidation.style.color = "red";
+    }
+
+    if (Password.length != 0) {
+        if (ConfirmPassword.length != 0) {
+            if(Password.length >= 8) {
+                if(Password == ConfirmPassword){
+                    ValidPassword = true;
+                }
+                else {
+                    SignUpValidation.textContent = "Password mismatch.";
+                    SignUpValidation.style.color = "red";
+                }
+            }
+            else {
+                SignUpValidation.textContent = "Password must contain at least 8 characters.";
+                SignUpValidation.style.color = "red";
+            }
+        }
+        else {
+            SignUpValidation.textContent = "Please confirm your password.";
+            SignUpValidation.style.color = "red";
+        }
+    }
+    else {
+        SignUpValidation.textContent = "You need to enter a password.";
+        SignUpValidation.style.color = "red";
+    }
+
+    if (NewEmail.length != 0) {
+        EmailExist = true;
+    }
+    else {
+        SignUpValidation.textContent = "Please enter an email.";
+        SignUpValidation.style.color = "red";
+    }
+
+    if (NewUsername.length != 0) {
+        NameExist = true;
+    }
+    else {
+        SignUpValidation.textContent = "Please enter a username.";
+        SignUpValidation.style.color = "red";
+    }
+
+    if (TOSconfirm == true && ValidPassword == true && NameExist == true && EmailExist == true) {
+        SignUpValidation.textContent = "Account has been made!";
+        SignUpValidation.style.color = "lime";
+    }
+}
+
+/*----------------------------------------------------------Change Password Validation----------------------------------------------------------------*/
+let ChangePasswordValidation = document.getElementById("change-password-validation");
+let ChangePasswordEmail = document.getElementById("change-password-email");
+
+function VerifyChangePassword() {
+    
+    let ChangePasswordValidation = document.getElementById("change-password-validation");
+    let ChangePasswordEmail = document.getElementById("change-password-email");
+    let EmailExist = false;
+
+    if (ChangePasswordEmail.textContent.length != 0) {
+        EmailExist = true;
+        ChangePasswordValidation.textContent = "We sent you an email to change your password";
+        ChangePasswordValidation.style.color = "lime";
+    }
+    else {
+        ChangePasswordValidation.textContent = "Please enter your email.";
+        ChangePasswordValidation.style.color = "red";
+    }
+
+    if (EmailExist == true) {
+        ChangePasswordValidation.textContent = "We sent you an email to change your password";
+        ChangePasswordValidation.style.color = "lime";
+    }
+
 }

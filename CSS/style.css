@@ -1165,3 +1165,109 @@ section.hero + .content-area {
 }
 
 /*-----------------------------------------------------/CART PAGE----------------------------------------------------*/
+
+
+
+/*------------------------------------------------- LOGIN/SIGNUP PAGE ------------------------------------------------*/
+
+.login-center {
+    display: none;
+    height: calc(100vh - 150px); /* Keeps it on screen under the nav */
+    justify-content: center;     
+    align-items: center;         
+}
+
+.login-center.active { display: flex; }
+
+
+.form-box {
+    background-image: linear-gradient(to top,#0a0b27, #212582);
+    width: 600px;
+    padding: 40px;
+    border-radius: 20px;
+    border: 4px solid #595DD4;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+}
+
+/* --- 3. THE TEXT & INPUTS --- */
+.form-header {
+    color: #C6C8F0;
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.form-properties {
+    width: 85%; 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    color: #C6C8F0;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    color: #212582;
+    width: 100%;
+    height: 40px;
+    padding: 5px 15px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't break the width */
+}
+
+.checkbox-group {
+    flex-direction: row; /* Puts the box and text side-by-side */
+    gap: 10px;
+}
+
+.checkbox-group .form-label {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.form-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.log-btn {
+    background-color: #595DD4;
+    color: #C6C8F0;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 2px solid #C6C8F0;
+    font-size: 14px;
+}
+
+.form-submit-btn {
+    background-color: #595DD4;
+    color: #C6C8F0;
+    cursor: pointer;
+    border: 3px solid #C6C8F0;
+    width: 200px;
+    padding: 15px;
+    font-size: 30px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.validation-msg {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 20px;
+}
+
+/*------------------------------------------------- /LOGIN/SIGNUP PAGE -------------------------------------------------*/
