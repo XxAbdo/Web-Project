@@ -189,40 +189,6 @@ if (searchInput && suggestionsBox)
 
 
 
-/*-------------------------------------------------------------Login Validation-------------------------------------------------------------*/
-let LoginValidation = document.getElementById("login-validation");
-let LoginPassword = document.getElementById("login-password");
-let LoginUsername = document.getElementById("login-username");
-
-function VerifyLogin() {
-    let LoginPassword = document.getElementById("login-password").value;
-    let LoginUsername = document.getElementById("login-username").value;
-    let NameExist = false;
-    let PasswordExist = false;
-
-
-    if (LoginPassword.length != 0) {
-        PasswordExist = true;
-    }
-    else {
-        LoginValidation.textContent = "You need to enter your password.";
-        LoginValidation.style.color = "red";
-    }
-
-    if (LoginUsername.length != 0) {
-        NameExist = true;
-    }
-    else {
-        LoginValidation.textContent = "You need to enter your username.";
-        LoginValidation.style.color = "red";
-    }
-    
-    if (PasswordExist == true && NameExist == true) {
-        LoginValidation.textContent = "You have logged into your account!";
-        LoginValidation.style.color = "lime";
-    }
-}
-
 /*------------------------------------------------------------login Panel Switching--------------------------------------------------------------*/
 let log_center = document.querySelectorAll('.login-center');
 let page_btns = document.querySelectorAll('.log-btn');
@@ -237,80 +203,6 @@ page_btns.forEach(btn => btn.addEventListener('click', () => {
 }))
 
 
-/*----------------------------------------------------------- Sign-Up Validation ---------------------------------------------------------------*/
-let SignUpValidation = document.getElementById("sign-up-validation");
-let checkbox = document.getElementById("TOS-Checkbox");
-let NewUsername = document.getElementById("new-username");
-let NewEmail = document.getElementById("new-email");
-
-
-function VerifySignUp() {
-
-    let Password = document.getElementById("password1").value;
-    let ConfirmPassword = document.getElementById("password2").value;
-    let NewUsername = document.getElementById("new-username").value;
-    let NewEmail = document.getElementById("new-email").value;
-    let ValidPassword = false;
-    let TOSconfirm = false;
-    let NameExist = false;
-    let EmailExist = false;
-
-
-    if (checkbox.checked) {
-        TOSconfirm = true;
-    }
-    else {
-        SignUpValidation.textContent = "Please confirm if you agree with our terms and services.";
-        SignUpValidation.style.color = "red";
-    }
-
-    if (Password.length != 0) {
-        if (ConfirmPassword.length != 0) {
-            if(Password.length >= 8) {
-                if(Password == ConfirmPassword){
-                    ValidPassword = true;
-                }
-                else {
-                    SignUpValidation.textContent = "Password mismatch.";
-                    SignUpValidation.style.color = "red";
-                }
-            }
-            else {
-                SignUpValidation.textContent = "Password must contain at least 8 characters.";
-                SignUpValidation.style.color = "red";
-            }
-        }
-        else {
-            SignUpValidation.textContent = "Please confirm your password.";
-            SignUpValidation.style.color = "red";
-        }
-    }
-    else {
-        SignUpValidation.textContent = "You need to enter a password.";
-        SignUpValidation.style.color = "red";
-    }
-
-    if (NewEmail.length != 0) {
-        EmailExist = true;
-    }
-    else {
-        SignUpValidation.textContent = "Please enter an email.";
-        SignUpValidation.style.color = "red";
-    }
-
-    if (NewUsername.length != 0) {
-        NameExist = true;
-    }
-    else {
-        SignUpValidation.textContent = "Please enter a username.";
-        SignUpValidation.style.color = "red";
-    }
-
-    if (TOSconfirm == true && ValidPassword == true && NameExist == true && EmailExist == true) {
-        SignUpValidation.textContent = "Account has been made!";
-        SignUpValidation.style.color = "lime";
-    }
-}
 
 /*----------------------------------------------------------Change Password Validation----------------------------------------------------------------*/
 let ChangePasswordValidation = document.getElementById("change-password-validation");
@@ -337,4 +229,215 @@ function VerifyChangePassword() {
         ChangePasswordValidation.style.color = "lime";
     }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Initialize the database
+let usersDB = JSON.parse(sessionStorage.getItem('myAppUsers')) || [];
+
+if (!usersDB.find(u => u.username === 'Eren_yeager')) {
+    usersDB.push({ username: 'Eren_yeager', email: 'eren@test.com', password: '123' });
+    sessionStorage.setItem('myAppUsers', JSON.stringify(usersDB));
+}
+
+
+function applyDynamicUserState(currentUser) {
+    
+    if (window.location.pathname.includes('Profile.html')) {
+        let profileName = document.querySelector('.profile-info h1');
+        let stats = document.querySelector('.stat-number');
+        let gamesList = document.getElementById('games-list');
+        let friendsList = document.getElementById('friends-tab');
+        let profilePfp = document.querySelector('.profile-header img');
+
+        if (profileName) profileName.textContent = currentUser;
+
+        // If it's a brand new user, clear out Eren's hardcoded data!
+        if (currentUser !== 'Eren_yeager') {
+            if (stats) stats.textContent = '🏆 0';
+            if (gamesList) gamesList.innerHTML = '<p style="color:var(--text-muted); margin-top:20px;">No games played yet. Go discover some!</p>';
+            if (friendsList) friendsList.innerHTML = '<p style="color:var(--text-muted); margin-top:20px;">No friends yet. Start connecting!</p>';
+            if (profilePfp) profilePfp.src = '../Images/website_images/website_logo.png';
+        }
+    }
+
+    
+    if (window.location.pathname.includes('settings.html')) {
+        let displayNameInput = document.getElementById('display-name');
+        let usernameInput = document.getElementById('username');
+        let settingsPfp = document.getElementById('avatar-preview');
+
+        
+        if (currentUser !== 'Eren_yeager') {
+            if (displayNameInput) displayNameInput.value = currentUser;
+            if (usernameInput) usernameInput.value = '@' + currentUser.toLowerCase();
+            if (settingsPfp) settingsPfp.src = '../Images/website_images/website_logo.png';
+        }
+        
+        // Handle Settings Page Logout button
+        let settingsLogout = document.getElementById('settings-logout-btn');
+        if (settingsLogout) {
+            settingsLogout.addEventListener('click', function(e) {
+                e.preventDefault();
+                sessionStorage.setItem('isLoggedIn', 'false');
+                window.location.href = 'login_signup.html';
+            });
+        }
+    }
+}
+
+
+checkAuthState();
+
+
+
+/*------------------------------------------------------------- AUTHENTICATION STATE & DYNAMIC UI -------------------------------------------------------------*/
+function checkAuthState() {
+    let isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    let currentUser = sessionStorage.getItem('currentUsername');
+    
+    let privateElements = document.querySelectorAll('.pfp, .nav_username, .settings, .cart, .lib');
+    let dropmenu = document.querySelector('.drop-menu');
+
+    if (isLoggedIn === 'true') {
+
+        privateElements.forEach(el => el.style.display = ''); 
+        
+
+        let navNameElement = document.querySelector('.nav_username');
+        let navPfp = document.querySelector('.pfp img');
+        
+        if (navNameElement) navNameElement.textContent = currentUser;
+        
+        if (currentUser !== 'Eren_yeager') {
+           navPfp.src = '../Images/website_images/website_logo.png';
+        }
+
+
+        if(dropmenu) {
+            dropmenu.innerHTML = `
+                <a>News</a>
+                <a href="Profile.html">Profile</a>
+                <a>Browse</a>
+                <a href="#" id="logout-btn">Log-Out</a>
+            `;
+            document.getElementById('logout-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                sessionStorage.setItem('isLoggedIn', 'false');
+                window.location.href = 'login_signup.html'; 
+            });
+        }
+
+        
+        applyDynamicUserState(currentUser);
+
+    } 
+    else {
+        
+        privateElements.forEach(el => el.style.display = 'none');
+        
+        if(dropmenu) {
+            dropmenu.innerHTML = `
+                <a>News</a>
+                <a>Browse</a>
+                <a href="login_signup.html">Log-In / Sign-Up</a>
+            `;
+        }
+
+        // Security Guard: Kick guests out of private pages
+        let currentPage = window.location.pathname;
+        if (currentPage.includes('Profile.html') || currentPage.includes('settings.html') || currentPage.includes('gaming-cart.html')) {
+            window.location.href = 'login_signup.html';
+        }
+    }
+}
+
+
+
+
+/*------------------------------------------------------------- LOGIN VALIDATION -------------------------------------------------------------*/
+function VerifyLogin() {
+    let LoginUsername = document.getElementById("login-username").value.trim();
+    let LoginPassword = document.getElementById("login-password").value;
+    let LoginValidation = document.getElementById("login-validation");
+
+    if (LoginUsername === "" || LoginPassword === "") {
+        LoginValidation.textContent = "Please enter both username and password.";
+        LoginValidation.style.color = "red";
+        return;
+    }
+
+    // Search for a matching user in the DB
+    let validUser = usersDB.find(user => user.username === LoginUsername && user.password === LoginPassword);
+
+    if (validUser) {
+        LoginValidation.textContent = "Login successful! Redirecting...";
+        LoginValidation.style.color = "lime";
+        
+        sessionStorage.setItem('isLoggedIn', 'true');
+        sessionStorage.setItem('currentUsername', validUser.username); 
+        
+        setTimeout(() => { window.location.href = "index.html"; }, 1000);
+    } else {
+        LoginValidation.textContent = "Invalid username or password.";
+        LoginValidation.style.color = "red";
+    }
+}
+
+/*----------------------------------------------------------- SIGN-UP VALIDATION ---------------------------------------------------------------*/
+function VerifySignUp() {
+    let Password = document.getElementById("password1").value;
+    let ConfirmPassword = document.getElementById("password2").value;
+    let NewUsername = document.getElementById("new-username").value.trim(); 
+    let NewEmail = document.getElementById("new-email").value.trim();
+    let checkbox = document.getElementById("TOS-Checkbox");
+    let SignUpValidation = document.getElementById("sign-up-validation");
+
+    if (!checkbox.checked) {
+        SignUpValidation.textContent = "Please agree to the Terms of Service.";
+        SignUpValidation.style.color = "red";
+        return; 
+    }
+    if (NewUsername === "" || NewEmail === "") {
+        SignUpValidation.textContent = "Please fill in all fields.";
+        SignUpValidation.style.color = "red";
+        return;
+    }
+    if (Password.length < 8 || Password !== ConfirmPassword) {
+        SignUpValidation.textContent = "Passwords must be at least 8 characters and match.";
+        SignUpValidation.style.color = "red";
+        return;
+    }
+
+    // Check if the username is already taken
+    let userExists = usersDB.some(user => user.username === NewUsername || user.email === NewEmail);
+    if (userExists) {
+        SignUpValidation.textContent = "Username or Email is already taken!";
+        SignUpValidation.style.color = "red";
+        return;
+    }
+
+    // Save the new user to the database
+    let newUser = { username: NewUsername, email: NewEmail, password: Password };
+    usersDB.push(newUser); 
+    sessionStorage.setItem('myAppUsers', JSON.stringify(usersDB)); 
+
+    SignUpValidation.textContent = "Account created! Please log in.";
+    SignUpValidation.style.color = "lime";
+
+    // Switch back to login panel automatically
+    setTimeout(() => {
+        document.querySelectorAll('.login-center').forEach(t => t.classList.remove('active'));
+        document.getElementById('login-panel').classList.add('active');
+    }, 1500);
 }

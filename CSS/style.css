@@ -30,11 +30,13 @@ body {
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
+    color: var(--text-light);
     background-color: var(--bg-color);
     margin: 0;    
     background-image: url(../Images/website_images/bg-circles.png);
     background-attachment: fixed;
     background-size: cover;
+    min-height: 100vh;
 }
 
 .content-area {
@@ -691,18 +693,6 @@ footer {
     border-radius: 50%;
 }
 
-.avatar-circle-large { 
-    width: 140px; 
-    height: 140px; 
-    background-color: var(--accent-red); 
-    border-radius: 50%; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    font-size: 70px; 
-    font-weight: 300; 
-    margin-right: 30px; 
-}
 
 .profile-info h1 { 
     font-size: 32px; 
