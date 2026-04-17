@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Game Sphere</title>
-  <link rel="stylesheet" href="../CSS/style.css">
+    <title>Checkout - Game Sphere</title>
+    
+       <link rel="stylesheet" href="../CSS/style.css">
+        
 </head>
-
 <body>
+
         <nav>
     
             <div class="nav-left">
@@ -72,95 +74,103 @@
 
         </nav>
 
-    <main class="faq-wrapper">
-        <div class="faq-header">
-            <h1>Frequently Asked Questions</h1>
-            <p>Answers to common questions about your Game Sphere account and library.</p>
-        </div>
+    <main class="checkout-wrapper">
+        <h1>Checkout</h1>
 
-        <div class="faq-accordion">
-            <details class="faq-item">
-                <summary>How do I download my games?</summary>
-                <div class="faq-content">
-                    <p>Go to your Library by clicking the book icon in the navigation bar. Select your game and click the "Install" button.</p>
-                </div>
-            </details>
-        </div>
-            <details class="faq-item">
-                <summary>Can I share my library with friends?</summary>
-                <div class="faq-content">
-                    <p>Game Sphere currently supports Family Sharing for up to 5 accounts within the same household.</p>
-                </div>
-            </details>
+        <form action="#" method="POST" class="checkout-form">
+            
+            <div class="left-column">
+                
+                <div class="form-section">
+                    <h2>Billing Details</h2>
+                    
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
 
-            <details class="faq-item">
-                <summary>What payment methods are accepted?</summary>
-                <div class="faq-content">
-              <p>We accept all major credit cards, PayPal, and Game Sphere Gift Cards.</p>
-                </div>
-            </details>
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-    <details class="faq-item">
-                <summary>What are the system requirements?</summary>
-                <div class="faq-content">
-                    <p>Each game page has a 'Requirements' section. We recommend checking these before purchasing to ensure smooth gameplay.</p>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country">
+                                <option value="us">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="eg">Egypt</option>
+                                <option value="ca">Canada</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                    </div>
                 </div>
-            </details>
 
-            <details class="faq-item">
-                <summary>Can I get a refund?</summary>
-                <div class="faq-content">
-                    <p>Yes, as long as the request is within 14 days of purchase and the game has been played for less than 2 hours.</p>
-                </div>
-            </details>
+                <div class="form-section">
+                    <h2>Payment Information</h2>
+                    
+                    <div class="input-group">
+                        <label for="name-on-card">Name on Card</label>
+                        <input type="text" id="name-on-card" name="name-on-card" required>
+                    </div>
 
-            <details class="faq-item">
-                <summary>How do I change my username?</summary>
-                <div class="faq-content">
-                    <p>Navigate to your <strong>Profile</strong> and click 'Edit Profile' to update your display name and avatar.</p>
-                </div>
-            </details>
+                    <div class="input-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="number" id="card-number" name="card-number" placeholder="0000 0000 0000 0000" required>
+                    </div>
 
-            <details class="faq-item">
-                <summary>Is Game Sphere available on mobile?</summary>
-                <div class="faq-content">
-                    <p>Currently, Game Sphere is optimized for desktop browsers, but you can browse the shop on your mobile device.</p>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="cvc">Security Code (CVC)</label>
+                            <input type="number" id="cvc" name="cvc" placeholder="123" required>
+                        </div>
+                    </div>
                 </div>
-            </details>
+            </div>
 
-            <details class="faq-item">
-                <summary>Can I play games offline?</summary>
-                <div class="faq-content">
-                    <p>Many single-player titles support offline mode. You just need to be online once to verify the initial launch.</p>
+            <div class="right-column">
+                <h2>Order Summary</h2>
+                
+                <div class="summary-item">
+                    <span>Cyberpunk 2077</span>
+                    <span>$59.99</span>
                 </div>
-            </details>
+                
+                <div class="summary-item">
+                    <span>Hollow Knight</span>
+                    <span>$14.99</span>
+                </div>
 
-            <details class="faq-item">
-                <summary>How do I secure my account?</summary>
-                <div class="faq-content">
-                    <p>We highly recommend enabling Two-Factor Authentication (2FA) in your <strong>Settings</strong> page.</p>
+                <div class="summary-total">
+                    <span>Total:</span>
+                    <span>$74.98</span>
                 </div>
-            </details>
 
-            <details class="faq-item">
-                <summary>Where can I see my purchase history?</summary>
-                <div class="faq-content">
-                    <p>Click on your username in the top left and select 'Account Details' to see all previous transactions.</p>
-                </div>
-            </details>
+                <button type="submit" class="btn-submit">Complete Purchase</button>
+            </div>
 
-            <details class="faq-item">
-                <summary>How do I contact support?</summary>
-                <div class="faq-content">
-                    <p>If you encounter any bugs, use the 'Contact Us' link in the footer to open a support ticket with our team.</p>
-                </div>
-            </details>
+        </form>
     </main>
 
     <footer>
         <div class="footer-buttons-container">
             <a class="footer-buttons">About Us</a>
-            <a class="footer-buttons" href="Privacy.html">Privacy & Policies</a>
+            <a class="footer-buttons" href="Privacy.html">Privacy &amp; Policies</a>
             <a class="footer-buttons" href="FAQ.html">FAQ</a>
         </div>
     </footer>
