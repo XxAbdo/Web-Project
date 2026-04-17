@@ -1477,4 +1477,122 @@ section.hero + .content-area {
         .btn-submit:hover {
             background-color: #1e8449;
         }
-/*-----------------------------------------------------/CHECOUT PAGE----------------------------------------------------*/
+/*-----------------------------------------------------/CHECkOUT PAGE----------------------------------------------------*/
+
+
+
+
+
+
+.news-header {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    color: #C6C8F0;
+}
+
+.hot-news {
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 6px;
+    border-color: #C6C8F0;
+    margin: 30px auto 20px auto;
+    width: 85%;
+    color: #C6C8F0;
+    background-image: url(../Images/hot-news-bg.png);
+    background-size: 115px;
+}
+
+.news-wrapper {
+    background-image: linear-gradient(to top,#0a0b27, #212582);
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 6px;
+    border-color: #595DD4;
+    margin: 30px auto 20px auto;
+    width: 75%;
+    color: #C6C8F0;
+}
+
+.news1, .news2 , .news3 {
+    display: flex;
+    padding: 20px;
+}
+
+.hot-news {
+    display: flex;
+    padding: 35px;
+}
+
+.news1 img, .news2 img, .news3 img, .hot-news img {
+    margin: auto 0px auto 0px;
+    border-style: solid;
+    border-color: #C6C8F0;
+}
+
+.news1-text, .news2-text, .news3-text, .hot-news-text {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0px 0px 20px;
+}
+
+.news-info, .hot-news-info {
+    display: flex;
+    align-items: center;
+    gap: 75%;
+    align-content: center;
+}
+
+.news-badge, .hot-news-badge, .hot-news-badge-special {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1.5px;
+}
+
+.hot-news-badge-special {
+    border-color: orangered;
+    color: orangered;
+}
+
+.news-seperation-line, .hot-news-seperation {
+    background-color: #595DD4;
+    color: #595DD4;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 0.1px;
+    border-radius: 75%;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #595DD4;
+}
+
+.news-header-seperation-line {
+    background-color: #595DD4;
+    color: #595DD4;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 0.1px;
+    border-radius: 75%;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #595DD4;
+}
+
+.hot-news-title {
+    color: #C6C8F0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.hot-news-seperation {
+    width: 100%;
+}

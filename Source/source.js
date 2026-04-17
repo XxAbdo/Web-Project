@@ -330,7 +330,7 @@ function checkAuthState() {
 
         if(dropmenu) {
             dropmenu.innerHTML = `
-                <a>News</a>
+                <a href="news.html">News</a>
                 <a href="Profile.html">Profile</a>
                 <a>Browse</a>
                 <a href="#" id="logout-btn">Log-Out</a>
@@ -352,7 +352,7 @@ function checkAuthState() {
         
         if(dropmenu) {
             dropmenu.innerHTML = `
-                <a>News</a>
+                <a href="news.html">News</a>
                 <a>Browse</a>
                 <a href="login_signup.html">Log-In / Sign-Up</a>
             `;
@@ -426,7 +426,7 @@ function VerifySignUp() {
     // Check if the username is already taken
     let userExists = usersDB.some(user => user.username === NewUsername || user.email === NewEmail);
     if (userExists) {
-        SignUpValidation.textContent = "Username or Email is already taken!";
+        SignUpVa/lidation.textContent = "Username or Email is already taken!";
         SignUpValidation.style.color = "red";
         return;
     }
