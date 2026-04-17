@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Library — Game Sphere</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <!--**************************************** NAV BAR ********************************************-->
+        <nav>
+    
+            <div class="nav-left">
+
+                <a class="pfp" href="Profile.html">
+                    <img src="../Images/website_images/pfp7.jpg" alt="pfp">
+                </a>
+
+                <a href="Profile.html" class="nav_username">Eren_yeager</a>
+                
+            </div>
+
+            <div class="nav-center">
+
+                <div class="logo">
+                    <a href="../Indices/index.html" class="logo">
+                        <img src="../Images/website_images/website_logo.png" alt="Game Sphere Logo">
+                    </a>
+                </div>
+
+                <div class="site-name">
+                    <a href="../Indices/index.html" class="logo">
+                        <img src="../Images/website_images/site_name2.png" alt="Game Sphere Logo">
+                    </a>
+                </div>
+            
+            </div>
+
+            <div class="nav-right">
+
+                <a href="settings.html" class="settings" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                </a>
+
+                <a href= "gaming-cart.html" class="cart" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                </a>
+
+                <a class="lib" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                </a>
+
+                <button class="hamburger-menu"> &#9776; </button>
+                <div class = "drop-menu">
+                    <a href="news.html">News</a>
+                    <a href="Profile.html">Profile</a>
+                    <a>Browse</a>
+                    <a href="login_signup.html">Log-Out</a>
+                </div>
+                
+            </div>
+
+        </nav>
+    <!--**************************************** /NAV BAR ********************************************-->
+
+
+    <!--======== LIBRARY LAYOUT ========-->
+    <div class="content-area">
+        <div id="lib-wrapper">
+
+            <div id="lib-sidebar">
+                <p id="lib-sidebar-title">My Library</p>
+                <p id="lib-game-count">4 Games</p>
+                <hr id="lib-divider">
+
+                <div id="lib-game-list">
+
+                    <div class="lib-game-entry active" onclick="libSelectGame(0)">
+                        <img src="../Images/minebanner.jpg" alt="Minecraft">
+                        <span>Minecraft</span>
+                    </div>
+
+                    <div class="lib-game-entry" onclick="libSelectGame(1)">
+                        <img src="../Images/pubgbanner.jpg" alt="PUBG">
+                        <span>PUBG</span>
+                    </div>
+
+                    <div class="lib-game-entry" onclick="libSelectGame(2)">
+                        <img src="../Images/eldenringbanner.jpg" alt="Elden Ring">
+                        <span>Elden Ring</span>
+                    </div>
+
+                    <div class="lib-game-entry" onclick="libSelectGame(3)">
+                        <img src="../Images/gtavbanner.webp" alt="GTA V">
+                        <span>GTA V</span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /lib-sidebar -->
+
+
+            <div id="lib-detail">
+
+                <!-- Hero banner -->
+                <div id="lib-hero-banner">
+                    <img id="lib-hero-img" src="../Images/minebanner.jpg" alt="Game Banner">
+                    <div id="lib-hero-overlay"></div>
+                    <h1 id="lib-hero-title">Minecraft</h1>
+                </div>
+
+                <!-- Single scrollable panel — no tabs -->
+                <div id="lib-main-panel">
+
+                    <!-- 1. PLAY BUTTON — first thing user sees -->
+                    <div id="lib-play-area">
+                        <button id="lib-play-btn" onclick="libPlayGame()">&#9654; &nbsp; Play</button>
+                        <p id="lib-play-note">Launching requires the Game Sphere desktop launcher.</p>
+                    </div>
+
+                    <hr class="lib-section-divider">
+
+                    <!-- 2. STATS ROW -->
+                    <div id="lib-stats-row">
+
+                        <div class="lib-stat-box">
+                            <span class="lib-stat-number" id="lib-stat-hours">--</span>
+                            <span class="lib-stat-label">Hours Played</span>
+                        </div>
+
+                        <div class="lib-stat-box">
+                            <span class="lib-stat-number" id="lib-stat-score">--</span>
+                            <span class="lib-stat-label">Overall Reviews</span>
+                        </div>
+
+                        <div class="lib-stat-box">
+                            <span class="lib-stat-number" id="lib-stat-achiev">--</span>
+                            <span class="lib-stat-label">Achievements</span>
+                        </div>
+
+                        <div class="lib-stat-box">
+                            <span class="lib-stat-number" id="lib-stat-last">--</span>
+                            <span class="lib-stat-label">Last Played</span>
+                        </div>
+
+                    </div>
+
+                    <!-- 3. DESCRIPTION -->
+                    <p id="lib-desc" class="lib-section-label-text"></p>
+
+                    <hr class="lib-section-divider">
+
+                    <!-- 4. BOTTOM TWO COLUMNS: achievements left, review form right -->
+                    <div id="lib-bottom-cols">
+
+                        <!-- LEFT COL: achievements table -->
+                        <div id="lib-achiev-col">
+                            <p class="lib-panel-heading">Achievements</p>
+                            <table id="lib-achiev-table">
+                                <tr>
+                                    <th>Achievement</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+                                </tr>
+                                <!-- rows injected by JS -->
+                            </table>
+                            <p id="lib-achiev-note">Sample achievement data for demonstration.</p>
+                        </div>
+
+                        <!-- RIGHT COL: review form + posted reviews -->
+                        <div id="lib-review-col">
+                            <p class="lib-panel-heading">Write a Review</p>
+
+                            <div id="lib-review-form">
+                                <label for="lib-review-name">Your Name:</label>
+                                <input type="text" id="lib-review-name" placeholder="Enter your name">
+
+                                <label for="lib-review-text">Your Review:</label>
+                                <textarea id="lib-review-text" rows="4" placeholder="Share your thoughts..."></textarea>
+
+                                <label for="lib-review-score">Score:</label>
+                                <select id="lib-review-score">
+                                    <option value="">-- Pick a score --</option>
+                                    <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733; &nbsp; Masterpiece (5/5)</option>
+                                    <option value="4">&#9733;&#9733;&#9733;&#9733;&#9734; &nbsp; Great (4/5)</option>
+                                    <option value="3">&#9733;&#9733;&#9733;&#9734;&#9734; &nbsp; Good (3/5)</option>
+                                    <option value="2">&#9733;&#9733;&#9734;&#9734;&#9734; &nbsp; Fair (2/5)</option>
+                                    <option value="1">&#9733;&#9734;&#9734;&#9734;&#9734; &nbsp; Poor (1/5)</option>
+                                </select>
+
+                                <button onclick="libSubmitReview()">Submit Review</button>
+                                <p id="lib-review-confirm"></p>
+                            </div>
+
+                            <div id="lib-review-list">
+                                <p class="lib-panel-heading">Community Reviews</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /lib-bottom-cols -->
+
+                </div>
+                <!-- /lib-main-panel -->
+
+            </div>
+            <!-- /lib-detail -->
+
+        </div>
+    </div>
+    <!-- /content-area -->
+
+
+    <button id="back-to-top" onclick="scrollToTop()" title="Back to top">&#8679;</button>
+
+    
+
+
+    <footer>
+
+        <div class = "footer-buttons-container">
+
+            <a class="footer-buttons">About Us</a>
+            <a class="footer-buttons" href="Privacy.html">Privacy & Policies</a>
+            <a class="footer-buttons" href="FAQ.html">FAQ</a>
+
+        </div>
+
+    </footer>
+        
+    <script src = "../Source/source.js"></script>
+</body>
+
+
+
+</html>
