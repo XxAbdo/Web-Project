@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Game Sphere</title>
+    <style>
+        
+        :root {
+            --bg-color: #0a0b27;
+            --nav-bg: #212582;
+            --panel-bg: #1b2838;
+            --border-color: #2a3b70;
+            --btn-hover: #4361ab;
+            --text-light: #e8e8f0;
+            --text-muted: #a3b1c6;
+            --highlight: #66c0f4;
+            --text-main: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        
+        nav {
+            background-color: var(--nav-bg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            height: 60px;
+        }
+
+        .nav-center { display: flex; align-items: center; gap: 10px; }
+        .nav-center img { height: 40px; }
+        .nav-left, .nav-right { display: flex; align-items: center; gap: 15px; }
+        .nav-right a, .nav-left a { color: white; text-decoration: none; }
+
+      
+        .faq-wrapper {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            flex: 1; 
+        }
+
+        .faq-wrapper {
+    color: white;
+}
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-header h1 {
+            font-size: 36px;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .faq-header p {
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .faq-item {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item summary {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-light);
+        }
+
+        .faq-item summary:hover {
+            background-color: var(--btn-hover);
+        }
+
+        
+        .faq-item summary::after {
+            content: '+';
+            color: var(--highlight);
+            font-size: 24px;
+        }
+
+        .faq-item[open] summary::after {
+            content: '−';
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-content {
+            padding: 0 20px 20px 20px;
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+       
+        footer {
+            background-color: var(--nav-bg);
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .footer-buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .footer-buttons {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <a class="pfp" href="Profile.html">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </a>
+            <a href="Profile.html" class="nav_username">USERNAME</a>
+        </div>
+
+        <div class="nav-center">
+            <div class="logo">
+                <img src="../Images/website_images/website_logo.png" alt="GS Logo">
+            </div>
+            <div class="site-name">
+                <img src="../Images/website_images/site_name2.png" alt="Game Sphere">
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <a href="settings.html">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </a>
+            <a href="gaming-cart.html">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </a>
+            <a class="lib">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </a>
+        </div>
+    </nav>
+
+    <main class="faq-wrapper">
+        <div class="faq-header">
+            <h1>Frequently Asked Questions</h1>
+            <p>Answers to common questions about your Game Sphere account and library.</p>
+        </div>
+
+        <div class="faq-accordion">
+            <details class="faq-item">
+                <summary>How do I download my games?</summary>
+                <div class="faq-content">
+                    <p>Go to your Library by clicking the book icon in the navigation bar. Select your game and click the "Install" button.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I share my library with friends?</summary>
+                <div class="faq-content">
+                    <p>Game Sphere currently supports Family Sharing for up to 5 accounts within the same household.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>What payment methods are accepted?</summary>
+                <div class="faq-content">
+              <p>We accept all major credit cards, PayPal, and Game Sphere Gift Cards.</p>
+                </div>
+            </details>
+
+    <details class="faq-item">
+                <summary>What are the system requirements?</summary>
+                <div class="faq-content">
+                    <p>Each game page has a 'Requirements' section. We recommend checking these before purchasing to ensure smooth gameplay.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I get a refund?</summary>
+                <div class="faq-content">
+                    <p>Yes, as long as the request is within 14 days of purchase and the game has been played for less than 2 hours.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>How do I change my username?</summary>
+                <div class="faq-content">
+                    <p>Navigate to your <strong>Profile</strong> and click 'Edit Profile' to update your display name and avatar.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Is Game Sphere available on mobile?</summary>
+                <div class="faq-content">
+                    <p>Currently, Game Sphere is optimized for desktop browsers, but you can browse the shop on your mobile device.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I play games offline?</summary>
+                <div class="faq-content">
+                    <p>Many single-player titles support offline mode. You just need to be online once to verify the initial launch.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>How do I secure my account?</summary>
+                <div class="faq-content">
+                    <p>We highly recommend enabling Two-Factor Authentication (2FA) in your <strong>Settings</strong> page.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Where can I see my purchase history?</summary>
+                <div class="faq-content">
+                    <p>Click on your username in the top left and select 'Account Details' to see all previous transactions.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>How do I contact support?</summary>
+                <div class="faq-content">
+                    <p>If you encounter any bugs, use the 'Contact Us' link in the footer to open a support ticket with our team.</p>
+                </div>
+            </details>
+    </main>
+
+    <footer>
+        <div class="footer-buttons-container">
+            <a class="footer-buttons" href="#">About Us</a>
+            <a class="footer-buttons" href="Privacy.html">Privacy & Policies</a>
+            <a class="footer-buttons" href="FAQ.html">FAQ</a>
+        </div>
+    </footer>
+</body>
+</html>

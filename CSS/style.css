@@ -65,6 +65,14 @@ nav {
 
 .nav_username{
     color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-left img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .settings, .cart, .lib, .pfp {
@@ -139,6 +147,7 @@ nav {
 .drop-menu a {
     padding: 15px 0;
     border-bottom: 1px solid var(--panel-bg);
+    text-decoration: none;
 }
 
 footer {
@@ -672,7 +681,14 @@ footer {
 .profile-header { 
     display: flex; 
     margin-bottom: 50px; 
-    align-items: center; 
+    align-items: center;
+    gap: 30px; 
+}
+
+.profile-header img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 .avatar-circle-large { 
