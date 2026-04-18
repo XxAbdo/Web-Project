@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Game Sphere</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-left">
+        <button class="hamburger-menu">&#9776;</button>
+        <div class="drop-menu">
+            <a href="../index.html"  style="color:white;text-decoration:none;">Home</a>
+            <a href="browse.html"   style="color:white;text-decoration:none;">Browse</a>
+            <a href="library.html"  style="color:white;text-decoration:none;">Library</a>
+            <a href="cart.html"     style="color:white;text-decoration:none;">Cart</a>
+            <a href="aboutus.html"  style="color:white;text-decoration:none;">About Us</a>
+        </div>
+        <div class="logo"><img src="../Images/website_images/logo.png" alt="Logo"></div>
+        <div class="site-name"><img src="../Images/website_images/gamesphere_name.png" alt="Game Sphere"></div>
+    </div>
+    <div class="nav-center">
+        <div class="search-wrapper" style="margin:0;">
+            <div class="search-container">
+                <input class="search-input" type="text" placeholder="Search games...">
+                <button class="search-btn">&#128269;</button>
+            </div>
+            <div class="suggestions-box" id="search-suggestions"></div>
+        </div>
+    </div>
+    <div class="nav-right">
+        <span class="nav_username">GuestUser</span>
+        <button class="lib"      onclick="window.location.href='library.html'"   title="Library">&#128218;</button>
+        <div class="cart-wrapper">
+            <button class="cart" onclick="window.location.href='cart.html'"      title="Cart">&#128722;</button>
+            <span id="cart-count"></span>
+        </div>
+        <button class="settings" onclick="window.location.href='settings.html'"  title="Settings">&#9881;</button>
+        <button class="pfp"      onclick="window.location.href='profile.html'"   title="Profile">&#128100;</button>
+    </div>
+</nav>
+
+<div class="content-area">
+
+    <!-- HERO -->
+    <div id="au-hero">
+        <h1 id="au-hero-title">About Game Sphere</h1>
+        <p id="au-hero-sub">Built by gamers. For gamers.</p>
+    </div>
+
+    <div id="au-wrapper">
+
+        <!-- MISSION -->
+        <h2 class="au-heading">Our Mission</h2>
+        <p class="au-text">
+            Game Sphere was born from a simple idea: every gamer deserves a single place to discover,
+            purchase, and celebrate the games they love. We set out to build a clean, fast,
+            community-driven platform that puts the experience first — whether you are a casual
+            player picking up your first title or a veteran hunting every achievement.
+        </p>
+
+        <hr class="au-divider">
+
+        <!-- STATS -->
+        <div id="au-stats-row">
+            <div class="au-stat-card">
+                <span class="au-stat-number" id="au-stat-games">0</span>
+                <span class="au-stat-label">Games in Catalog</span>
+            </div>
+            <div class="au-stat-card">
+                <span class="au-stat-number" id="au-stat-users">0</span>
+                <span class="au-stat-label">Active Players</span>
+            </div>
+            <div class="au-stat-card">
+                <span class="au-stat-number" id="au-stat-reviews">0</span>
+                <span class="au-stat-label">User Reviews</span>
+            </div>
+            <div class="au-stat-card">
+                <span class="au-stat-number" id="au-stat-countries">0</span>
+                <span class="au-stat-label">Countries Reached</span>
+            </div>
+        </div>
+
+        <hr class="au-divider">
+
+        <!-- TEAM -->
+        <h2 class="au-heading">Meet the Team</h2>
+        <p class="au-text" style="margin-bottom:28px;">
+            Game Sphere is maintained by a team of six students from the British University in Egypt,
+            Faculty of Informatics and Computer Science.
+        </p>
+
+        <div id="au-team-grid">
+            <div class="au-team-card">
+                <div class="au-avatar">&#128100;</div>
+                <p class="au-member-name">Member One</p>
+                <p class="au-member-role">Project Lead &amp; HTML</p>
+                <p class="au-text">Oversaw the project structure and built the core page layouts.</p>
+            </div>
+            <div class="au-team-card">
+                <div class="au-avatar">&#128100;</div>
+                <p class="au-member-name">Member Two</p>
+                <p class="au-member-role">CSS &amp; Visual Design</p>
+                <p class="au-text">Responsible for the color theme, typography, and all visual styling.</p>
+            </div>
+            <div class="au-team-card">
+                <div class="au-avatar">&#128100;</div>
+                <p class="au-member-name">Member Three</p>
+                <p class="au-member-role">JavaScript &amp; Interactivity</p>
+                <p class="au-text">Built the search system, sliders, tab switching, and dynamic UI.</p>
+            </div>
+            <div class="au-team-card">
+                <div class="au-avatar">&#128100;</div>
+                <p class="au-member-name">Member Four</p>
+                <p class="au-member-role">Game Pages &amp; Content</p>
+                <p class="au-text">Created individual game base pages and sourced all game content.</p>
+            </div>
+            <div class="au-team-card">
+                <div class="au-avatar">&#128100;</div>
+                <p class="au-member-name">Member Five</p>
+                <p class="au-member-role">Forms &amp; Validation</p>
+                <p class="au-text">Designed all forms, validation logic, and server-side processing.</p>
+            </div>
+            <div class="au-team-card">
+                <div class="au-avatar">&#128100;</div>
+                <p class="au-member-name">Member Six</p>
+                <p class="au-member-role">Library &amp; Profile Pages</p>
+                <p class="au-text">Built the user library, profile dashboard, and achievement system.</p>
+            </div>
+        </div>
+
+        <hr class="au-divider">
+
+        <!-- VALUES TABLE -->
+        <h2 class="au-heading">What We Stand For</h2>
+
+        <table id="au-values-table">
+            <thead>
+                <tr>
+                    <th>Value</th>
+                    <th>What It Means</th>
+                    <th>How We Apply It</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="au-value-name">&#127918; Community First</td>
+                    <td>Players are at the heart of every decision we make.</td>
+                    <td>User reviews, wishlists, and friend activity are front and center.</td>
+                </tr>
+                <tr>
+                    <td class="au-value-name">&#9889; Performance</td>
+                    <td>A fast site means more time gaming, less time waiting.</td>
+                    <td>Lean code, no bloated libraries, optimized images throughout.</td>
+                </tr>
+                <tr>
+                    <td class="au-value-name">&#9855; Accessibility</td>
+                    <td>Gaming is for everyone, regardless of ability.</td>
+                    <td>W3C guidelines followed, semantic HTML, descriptive alt text.</td>
+                </tr>
+                <tr>
+                    <td class="au-value-name">&#128275; Transparency</td>
+                    <td>Honest information about every title in our catalog.</td>
+                    <td>Real user reviews, clear pricing, and detailed system requirements.</td>
+                </tr>
+                <tr>
+                    <td class="au-value-name">&#127775; Discovery</td>
+                    <td>The best game you've played might be one you haven't found yet.</td>
+                    <td>Browse filters, recommendations, and curated homepage sections.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr class="au-divider">
+
+        <!-- CONTACT FORM -->
+        <h2 class="au-heading">Get In Touch</h2>
+        <p class="au-text">Have feedback or a question? Fill in the form and we will get back to you.</p>
+
+        <form id="au-contact-form" action="mailto:support@gamesphere.com" method="post" enctype="text/plain">
+
+            <fieldset class="au-fieldset">
+                <legend class="au-legend">Your Details</legend>
+
+                <div class="au-form-row">
+                    <div class="au-form-group">
+                        <label for="au-name" class="au-label">Full Name</label>
+                        <input type="text"  id="au-name"  name="name"  class="au-input" placeholder="John Doe">
+                    </div>
+                    <div class="au-form-group">
+                        <label for="au-email" class="au-label">Email Address</label>
+                        <input type="email" id="au-email" name="email" class="au-input" placeholder="you@example.com">
+                    </div>
+                </div>
+
+                <div class="au-form-group" style="margin-top:14px;">
+                    <label for="au-subject" class="au-label">Subject</label>
+                    <select id="au-subject" name="subject" class="au-input">
+                        <option value="">Select a topic</option>
+                        <option value="feedback">General Feedback</option>
+                        <option value="bug">Report a Bug</option>
+                        <option value="support">Technical Support</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset class="au-fieldset" style="margin-top:16px;">
+                <legend class="au-legend">Your Message</legend>
+
+                <div class="au-form-group">
+                    <label for="au-message" class="au-label">Message</label>
+                    <textarea id="au-message" name="message" class="au-input" rows="5" placeholder="Write your message here..."></textarea>
+                </div>
+
+                <label style="color:var(--text-muted);font-size:13px;margin-top:12px;display:block;">
+                    <input type="checkbox" id="au-subscribe" name="subscribe" style="margin-right:8px;">
+                    Subscribe to our newsletter
+                </label>
+            </fieldset>
+
+            <div style="display:flex;gap:12px;margin-top:18px;">
+                <button type="button" id="au-submit-btn" onclick="auSubmitForm()">Send Message</button>
+                <button type="reset"  id="au-reset-btn"  onclick="auResetForm()">Clear</button>
+            </div>
+
+            <p id="au-form-confirm"></p>
+
+        </form>
+
+        <hr class="au-divider">
+
+        <!-- EXTERNAL LINKS -->
+        <h2 class="au-heading">Useful Links</h2>
+        <div id="au-links-row">
+            <a href="https://www.w3.org/"            target="_blank" class="au-ext-link">W3C Standards</a>
+            <a href="https://validator.w3.org/"      target="_blank" class="au-ext-link">W3C Validator</a>
+            <a href="https://www.w3schools.com/"     target="_blank" class="au-ext-link">W3Schools</a>
+            <a href="https://developer.mozilla.org/" target="_blank" class="au-ext-link">MDN Web Docs</a>
+            <a href="mailto:support@gamesphere.com"                  class="au-ext-link">&#9993; Email Us</a>
+        </div>
+
+    </div><!-- /#au-wrapper -->
+</div><!-- /.content-area -->
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-buttons-container">
+        <button class="footer-buttons" onclick="window.location.href='aboutus.html'">About Us</button>
+        <button class="footer-buttons">Support</button>
+        <button class="footer-buttons">Privacy Policy</button>
+    </div>
+    <p style="color:#a3b1c6;font-size:12px;margin:6px 0 0 0;">&copy; 2026 Game Sphere. All rights reserved.</p>
+</footer>
+
+<button id="back-to-top" onclick="scrollToTop()" title="Back to top">&#8679;</button>
+<script src="../JS/source.js"></script>
+</body>
+</html>

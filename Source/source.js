@@ -625,16 +625,16 @@ function recCardClick(gameName) {
 /* ---- FUNCTION 9: Gamebase search bar ---- */
 
 const gbGames = [
-    { name: "Resident Evil Requiem",  url: "#",                                          image: "../../Images/game_images/resident_evil_requiem/rer.jpg" },
-    { name: "Detroit Become Human",   url: "../Games_Indicies/gametemplate_DBH.html",    image: "../../Images/game_images/detroit_become_human/detroit_become_human.jpg" },
-    { name: "Forza Horizon 5",        url: "#",                                          image: "../../Images/game_images/forza_horizon5/forza.jpg" },
-    { name: "Space Flight Simulator", url: "#",                                          image: "../../Images/game_images/space_flight_sim/space_flight_sim_poster.png" },
-    { name: "Call Of Duty: Warzone",  url: "#",                                          image: "../../Images/game_images/call_of_duty_warzon/warzone.jpg" },
-    { name: "Trailsmakers",           url: "#",                                          image: "../../Images/game_images/trailsmakers/trailsmaker.jpg" },
-    { name: "It Takes Two",           url: "#",                                          image: "../../Images/game_images/it_takes_two/it_takes_two.jpg" },
-    { name: "Cyber Punk 2077",        url: "#",                                          image: "../../Images/game_images/cyberpunk2077/cyber_punk.jpg" },
-    { name: "War Thunder",            url: "#",                                          image: "../../Images/game_images/warthunder/warthunder.png" },
-    { name: "Red Dead Redemption 2",  url: "../Games_Indicies/gametemplate_RDR2.html",   image: "../../Images/game_images/red_dead_redemtion2/red_dead_redemption2.png" }
+    { name: "Resident Evil Requiem",  url: "#",                                          image: "../Images/game_images/resident_evil_requiem/rer.jpg" },
+    { name: "Detroit Become Human",   url: "../Games_Indicies/gametemplate_DBH.html",    image: "../Images/game_images/detroit_become_human/detroit_become_human.jpg" },
+    { name: "Forza Horizon 5",        url: "#",                                          image: "../Images/game_images/forza_horizon5/forza.jpg" },
+    { name: "Space Flight Simulator", url: "#",                                          image: "../Images/game_images/space_flight_sim/space_flight_sim_poster.png" },
+    { name: "Call Of Duty: Warzone",  url: "#",                                          image: "../Images/game_images/call_of_duty_warzon/warzone.jpg" },
+    { name: "Trailsmakers",           url: "#",                                          image: "../Images/game_images/trailsmakers/trailsmaker.jpg" },
+    { name: "It Takes Two",           url: "#",                                          image: "../Images/game_images/it_takes_two/it_takes_two.jpg" },
+    { name: "Cyber Punk 2077",        url: "#",                                          image: "../Images/game_images/cyberpunk2077/cyber_punk.jpg" },
+    { name: "War Thunder",            url: "#",                                          image: "../Images/game_images/warthunder/warthunder.png" },
+    { name: "Red Dead Redemption 2",  url: "../Games_Indicies/gametemplate_RDR2.html",   image: "../Images/game_images/red_dead_redemtion2/red_dead_redemption2.png" }
 ];
 
 let gbSearchInput    = document.querySelector('#nav2 .search-input');

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse — Game Sphere</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-left">
+        <button class="hamburger-menu">&#9776;</button>
+        <div class="drop-menu">
+            <a href="../index.html"  style="color:white;text-decoration:none;">Home</a>
+            <a href="browse.html"   style="color:white;text-decoration:none;">Browse</a>
+            <a href="library.html"  style="color:white;text-decoration:none;">Library</a>
+            <a href="cart.html"     style="color:white;text-decoration:none;">Cart</a>
+            <a href="aboutus.html"  style="color:white;text-decoration:none;">About Us</a>
+        </div>
+        <div class="logo"><img src="../Images/website_images/logo.png" alt="Logo"></div>
+        <div class="site-name"><img src="../Images/website_images/gamesphere_name.png" alt="Game Sphere"></div>
+    </div>
+    <div class="nav-center">
+        <div class="search-wrapper" style="margin:0;">
+            <div class="search-container">
+                <input class="search-input" type="text" placeholder="Search games...">
+                <button class="search-btn">&#128269;</button>
+            </div>
+            <div class="suggestions-box" id="search-suggestions"></div>
+        </div>
+    </div>
+    <div class="nav-right">
+        <span class="nav_username">GuestUser</span>
+        <button class="lib"      onclick="window.location.href='library.html'"   title="Library">&#128218;</button>
+        <div class="cart-wrapper">
+            <button class="cart" onclick="window.location.href='cart.html'"      title="Cart">&#128722;</button>
+            <span id="cart-count"></span>
+        </div>
+        <button class="settings" onclick="window.location.href='settings.html'"  title="Settings">&#9881;</button>
+        <button class="pfp"      onclick="window.location.href='profile.html'"   title="Profile">&#128100;</button>
+    </div>
+</nav>
+
+<div class="content-area">
+
+    <!-- HERO BANNER -->
+    <div id="browse-hero">
+        <h1>Browse Games</h1>
+        <p>Explore our full catalog — find your next adventure</p>
+    </div>
+
+    <div id="browse-layout">
+
+        <!-- SIDEBAR FILTERS -->
+        <aside id="browse-sidebar">
+
+            <p class="browse-filter-heading">Search</p>
+            <input type="text" id="browse-filter-search" class="browse-input" placeholder="Game title...">
+
+            <hr class="browse-divider">
+
+            <p class="browse-filter-heading">Genre</p>
+            <label class="browse-filter-label"><input type="checkbox" class="genre-check" value="Action">        Action</label>
+            <label class="browse-filter-label"><input type="checkbox" class="genre-check" value="RPG">           RPG</label>
+            <label class="browse-filter-label"><input type="checkbox" class="genre-check" value="Shooter">       Shooter</label>
+            <label class="browse-filter-label"><input type="checkbox" class="genre-check" value="Sandbox">       Sandbox</label>
+            <label class="browse-filter-label"><input type="checkbox" class="genre-check" value="Racing">        Racing</label>
+            <label class="browse-filter-label"><input type="checkbox" class="genre-check" value="Simulation">    Simulation</label>
+            <label class="browse-filter-label"><input type="checkbox" class="genre-check" value="Battle Royale"> Battle Royale</label>
+
+            <hr class="browse-divider">
+
+            <p class="browse-filter-heading">Price</p>
+            <label class="browse-filter-label"><input type="radio" name="price-filter" value="all"     checked> All</label>
+            <label class="browse-filter-label"><input type="radio" name="price-filter" value="free">            Free to Play</label>
+            <label class="browse-filter-label"><input type="radio" name="price-filter" value="under20">         Under $20</label>
+            <label class="browse-filter-label"><input type="radio" name="price-filter" value="under40">         Under $40</label>
+            <label class="browse-filter-label"><input type="radio" name="price-filter" value="over40">          $40 and above</label>
+
+            <hr class="browse-divider">
+
+            <p class="browse-filter-heading">Sort By</p>
+            <select id="browse-sort" class="browse-input">
+                <option value="featured">Featured</option>
+                <option value="az">A to Z</option>
+                <option value="za">Z to A</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+            </select>
+
+            <hr class="browse-divider">
+
+            <button id="browse-reset-btn" onclick="browseReset()">Reset Filters</button>
+
+        </aside>
+
+        <!-- GAME GRID -->
+        <main id="browse-main">
+            <p id="browse-count-label">Showing all games</p>
+            <div id="browse-grid">
+                <!-- Cards built by JS -->
+            </div>
+            <p id="browse-no-results">No games match your filters. Try adjusting them.</p>
+        </main>
+
+    </div><!-- /#browse-layout -->
+
+</div><!-- /.content-area -->
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-buttons-container">
+        <button class="footer-buttons" onclick="window.location.href='aboutus.html'">About Us</button>
+        <button class="footer-buttons">Support</button>
+        <button class="footer-buttons">Privacy Policy</button>
+    </div>
+    <p style="color:#a3b1c6;font-size:12px;margin:6px 0 0 0;">&copy; 2026 Game Sphere. All rights reserved.</p>
+</footer>
+
+<button id="back-to-top" onclick="scrollToTop()" title="Back to top">&#8679;</button>
+<script src="../JS/source.js"></script>
+</body>
+</html>
