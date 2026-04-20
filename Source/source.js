@@ -90,7 +90,7 @@ profileBtns.forEach(btn => btn.addEventListener('click', () =>{
 
 const availableGames = [
     { name: "Resident Evil Requiem",    url: "#",                                                   image: "../images/game_images/resident_evil_requiem/rer.jpg"},
-    { name: "Detroit Become Human",     url: "../Indices/Games_Indicies/gametemplate_DBH.html",     image: "../images/game_images/detroit_become_human/detroit_become_human.jpg"}, 
+    { name: "Detroit Become Human",     url: "../Indices/detroidbase.html",     image: "../images/game_images/detroit_become_human/detroit_become_human.jpg"}, 
     { name: "Forza Horizon 5",          url: "#",                                                   image: "../images/game_images/forza_horizon5/forza.jpg" },
     { name: "Space Flight Simulator",   url: "#",                                                   image: "../images/game_images/space_flight_sim/space_flight_sim_poster.png" },
     { name: "Call Of Duty: Warzone",    url: "#",                                                   image: "../images/game_images/call_of_duty_warzon/warzone.jpg" },
@@ -98,7 +98,7 @@ const availableGames = [
     { name: "It Takes Two",             url: "#",                                                   image: "../images/game_images/it_takes_two/it_takes_two.jpg" },
     { name: "Cyber Punk 2077",          url: "#",                                                   image: "../images/game_images/cyberpunk2077/cyber_punk.jpg" },
     { name: "War Thunder",              url: "#",                                                   image: "../images/game_images/warthunder/warthunder.png" },
-    { name: "Red Dead Redemption 2",    url: "../Indices/Games_Indicies/gametemplate_RDR2.html",    image: "../images/game_images/red_dead_redemtion2/red_dead_redemption2.png" }
+    { name: "Red Dead Redemption 2",    url: "../Indices/rdr2base.html",    image: "../images/game_images/red_dead_redemtion2/red_dead_redemption2.png" }
 ];
 
 let searchInput = document.querySelector('.search-input');
@@ -294,6 +294,16 @@ function applyDynamicUserState(currentUser) {
             });
         }
     }
+
+    if (window.location.pathname.includes('library.html')) {
+        let libWrapper = document.getElementById("lib-wrapper");
+
+        if (currentUser !== 'Eren_yeager') {
+            
+            if(libWrapper) {libWrapper.innerHTML = `<p style="color:var(--text-muted); margin-top:20px;">No games played yet. Go discover some!</p>`}
+    
+        }
+    }
 }
 
 
@@ -360,7 +370,7 @@ function checkAuthState() {
 
         // Security Guard: Kick guests out of private pages
         let currentPage = window.location.pathname;
-        if (currentPage.includes('Profile.html') || currentPage.includes('settings.html') || currentPage.includes('gaming-cart.html')) {
+        if (currentPage.includes('Profile.html') || currentPage.includes('settings.html') || currentPage.includes('gaming-cart.html') || currentPage.includes('library.html')) {
             window.location.href = 'login_signup.html';
         }
     }
@@ -626,7 +636,7 @@ function recCardClick(gameName) {
 
 const gbGames = [
     { name: "Resident Evil Requiem",  url: "#",                                          image: "../Images/game_images/resident_evil_requiem/rer.jpg" },
-    { name: "Detroit Become Human",   url: "../Games_Indicies/gametemplate_DBH.html",    image: "../Images/game_images/detroit_become_human/detroit_become_human.jpg" },
+    { name: "Detroit Become Human",   url: "../Indices/detroidbase.html",    image: "../Images/game_images/detroit_become_human/detroit_become_human.jpg" },
     { name: "Forza Horizon 5",        url: "#",                                          image: "../Images/game_images/forza_horizon5/forza.jpg" },
     { name: "Space Flight Simulator", url: "#",                                          image: "../Images/game_images/space_flight_sim/space_flight_sim_poster.png" },
     { name: "Call Of Duty: Warzone",  url: "#",                                          image: "../Images/game_images/call_of_duty_warzon/warzone.jpg" },
@@ -634,7 +644,7 @@ const gbGames = [
     { name: "It Takes Two",           url: "#",                                          image: "../Images/game_images/it_takes_two/it_takes_two.jpg" },
     { name: "Cyber Punk 2077",        url: "#",                                          image: "../Images/game_images/cyberpunk2077/cyber_punk.jpg" },
     { name: "War Thunder",            url: "#",                                          image: "../Images/game_images/warthunder/warthunder.png" },
-    { name: "Red Dead Redemption 2",  url: "../Games_Indicies/gametemplate_RDR2.html",   image: "../Images/game_images/red_dead_redemtion2/red_dead_redemption2.png" }
+    { name: "Red Dead Redemption 2",  url: "../Indices/rdr2base.html",   image: "../Images/game_images/red_dead_redemtion2/red_dead_redemption2.png" }
 ];
 
 let gbSearchInput    = document.querySelector('#nav2 .search-input');
